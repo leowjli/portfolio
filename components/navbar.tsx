@@ -49,7 +49,7 @@ export default function Navbar() {
                 <ul className="md:flex space-x-0 lg:space-x-2 xl:space-x-6">
                     {navigation.map((nav_item, id) => {
                         return (
-                            <Link className="transition-all duration-500 ease-in" href={nav_item.path} key={id}>
+                            <Link className="transition-all duration-500 ease-in" href={nav_item.path} key={id} target={nav_item.name === "Resume" ? "_blank" : "_self"}>
                                 <p className={`text-center text-base p-2 hover:border-b-2 ${path === nav_item.path ? "text-[#398EEB] font-semibold hover:border-[#398EEB]" : "text-black font-medium hover:border-black"}`}>{nav_item.name}</p>
                             </Link>
                         )

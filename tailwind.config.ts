@@ -28,7 +28,7 @@ export default {
         },
       },
       boxShadow: {
-        'custom-gradient': '5px 5px rgba(240, 46, 170, 0.5), 10px 10px rgba(240, 46, 170, 0.3), 15px 15px rgba(240, 46, 170, 0.2), 20px 20px rgba(240, 46, 170, 0.1), 25px 25px rgba(240, 46, 170, 0.05)',
+        'custom-gradient': '5px 5px rgba(57, 142, 235, 0.5), 10px 10px rgba(57, 142, 235, 0.3), 15px 15px rgba(57, 142, 235, 0.2), 20px 20px rgba(57, 142, 235, 0.1), 25px 25px rgba(57, 142, 235, 0.05)',
       }
     },
   },

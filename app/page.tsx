@@ -37,7 +37,7 @@ export default function Home() {
                     <p className="intro-headline text-base font-medium md:text-lg xl:text-2xl">An aspiring frontend developer + Informatics student @ UW</p>
                 </motion.div>
             </div>
-            <div className="mouse-section absolute hidden left-1/2 transform -translate-x-1/2 sm:block sm:bottom-52 md:bottom-40">
+            <div className="mouse-section absolute hidden left-1/2 transform -translate-x-1/2 sm:block sm:bottom-52 md:bottom-40 lg:bottom-[60%]">
                 <div className="mouse w-[30px] h-[54px] border-[3px] border-black rounded-[60px] ">
                     <span className="before:content-[''] before:w-2 before:h-2 before:absolute before:top-[10px] before:bg-black before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:opacity-100 before:animate-mouse" />
                 </div>

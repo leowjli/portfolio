@@ -120,7 +120,7 @@ export const skills = [
     },
     {
         name: 'Next JS',
-        svgPath: '/',
+        svgPath: '/nextjs.png',
         alt: '',
     },
     {
@@ -131,6 +131,11 @@ export const skills = [
     {
         name: 'Tailwind',
         svgPath: '/tailwind.png',
+        alt: '',
+    },
+    {
+        name: 'Bootstrap',
+        svgPath: '/bootstrap.png',
         alt: '',
     },
     {
@@ -155,7 +160,7 @@ export const skills = [
     },
     {
         name: 'Express JS',
-        svgPath: '/',
+        svgPath: '/expressjs.png',
         alt: '',
     },
     {
@@ -183,4 +188,16 @@ export const skills = [
         svgPath: '/npm.png',
         alt: '',
     },
+]
+
+export const gallery = [
+    "/leo_profile_pic.png",
+    "/leo_profile_pic.png",
+    "/leo_profile_pic.png",
+    "/leo_profile_pic.png",
+    "/leo_profile_pic.png",
+    "/donut.png",
+    "/donut.png",
+    "/donut.png",
+    "/donut.png",
 ]
