@@ -7,7 +7,7 @@ export function ProjectCard({ path, link, github, title, role, desc, alt }: Proj
     return (
         <div className="flex flex-col lg:flex-row">
             <Link href={link} className="w-full md:max-w-[400px] md:max-h-[300px]">
-                <Image className="sm:rounded-t-[20px] lg:rounded-tr-none lg:rounded-s-[20px] bg-black w-full h-full object-cover"
+                <Image className="rounded-t-[20px] lg:rounded-tr-none lg:rounded-s-[20px] bg-black w-full h-full object-cover"
                     src={path}
                     width={200}
                     height={200}
