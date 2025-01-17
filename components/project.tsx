@@ -6,18 +6,20 @@ import { motion } from "framer-motion";
 export function ProjectCard({ path, link, github, title, role, desc, alt }: ProjectCardProps) {
     return (
         <div className="flex flex-col lg:flex-row">
-            <Link href={link} className="w-full md:max-w-[400px] md:max-h-[300px]">
-                <Image className="rounded-t-[20px] lg:rounded-tr-none lg:rounded-s-[20px] bg-black w-full h-full object-cover"
-                    src={path}
-                    width={200}
-                    height={200}
-                    alt={alt}
-                />
+            <Link href={link} className="w-full lg:max-w-[400px] lg:max-h-[300px]">
+                <div className="relative w-full h-[250px] lg:h-full">
+                    <Image className="rounded-t-[20px] lg:rounded-tr-none lg:rounded-s-[20px] bg-black object-cover"
+                        src={path}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={alt}
+                    />
+                </div>
             </Link>
-            <div className="flex flex-col justify-start mx-10 mt-1 mb-4">
+            <div className="flex flex-col justify-start mx-10 mt-1 mb-4 max-w-full overflow-hidden">
                 <h2 className="sm:text-xl md:text-2xl lg:text-3xl font-semibold mt-3 md:mt-6 lg:mt-10">{title}</h2>
                 <p className="lg:text-lg mb-3">{role}</p>
-                <p className="mb-3 lg:text-lg lg:mt-5">{desc}</p>
+                <p className="mb-3 lg:text-lg lg:mt-5 break-words">{desc}</p>
                 <div className={`${github && link ? "flex gap-5" : ""}`}>
                     <Link href={github} target="_blank" rel="noopener noreferrer" className={`${github ? "block" : ""}`}>
                         <p className={`${github ? "lg:text-lg px-3 py-1 border border-black rounded-lg max-w-fit" : ""}`}>{github ? "GitHub" : ""}</p>
@@ -43,8 +45,8 @@ interface ProjectCardProps {
 
 export default function Project() {
     return (
-        <section className="projects-grid grid grid-cols-1 sm:grid-cols-2
-        gap-x-10 gap-y-4 sm:gap-x-2 md:gap-x-9 mx-5 sm:mx-10 md:mx-24">
+        <section className="projects-grid grid grid-cols-1
+        gap-x-10 gap-y-4 sm:gap-x-2 md:gap-x-9 mx-5 sm:mx-10 md:mx-24 lg:grid-cols-1">
             {projects.map((project, index) => (
                 <motion.div
                     key={index}

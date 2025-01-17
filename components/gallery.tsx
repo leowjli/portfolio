@@ -38,16 +38,18 @@ export default function Gallery({ images, visibleImg }: CarouselProps) {
 
     return (
         <div className="relative w-full mx-auto">
-            <div className="flex justify-center space-x-4 rounded-lg">
+            <div className="flex flex-wrap justify-center space-y-4 sm:space-y-0 sm:flex-col md:flex-row md:space-x-4 rounded-lg">
                 {displayed.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0 max-w-[200px]">
-                        <Image
-                            src={image}
-                            alt={`photo ${index} for photo carousel of activities`}
-                            width={400}
-                            height={600}
-                            className="object-cover transition-transform duration-500"
-                        />
+                    <div key={index} className="w-full sm:w-auto md:w-1/2 flex-shrink-0 max-w-[250px]">
+                        <div className="relative w-full h-[400px]">
+                            <Image
+                                src={image}
+                                alt={`photo ${index} for photo carousel of activities`}
+                                layout="fill"
+                                objectFit="cover"
+                                className="transition-transform duration-500"
+                            />
+                        </div>
                     </div>
                 ))}
             </div>
@@ -57,7 +59,7 @@ export default function Gallery({ images, visibleImg }: CarouselProps) {
             <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full">
                 &gt;
             </button>
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-slate-600 py-2 px-4 rounded">
                 <p>{currId + 1}/{images.length}</p>
             </div>
         </div>

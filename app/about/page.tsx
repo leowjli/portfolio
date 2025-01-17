@@ -15,14 +15,15 @@ export default function About() {
             <Navbar />
             <section className="flex flex-col md:flex-row-reverse md:justify-between md:items-center mt-32 md:mt-36 mb-12 mx-9 sm:mx-20 md:mx-36 lg:mx-48">
                 <motion.div
+                    className="flex justify-center items-center"
                     initial={{ opacity: 0, y: 70 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1, duration: 1, ease: easeIn }}
+                    transition={{ duration: 1, ease: easeIn }}
                 >
-                    <div className="flex justify-center items-center mb-20 md:mx-10 max-w-[350px] w-full">
+                    <div className="mb-20 md:mx-10 max-w-[350px] w-full">
                         <Image
                             className="w-full h-auto rounded-[26px] shadow-custom-gradient"
-                            src="/leo_profile_pic.png" 
+                            src="/headshot.jpg" 
                             alt="profile picture" 
                             width={600} 
                             height={850} 
@@ -32,7 +33,7 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, y: 70 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: easeIn }}
+                    transition={{ delay: 1, duration: 0.5, ease: easeIn }}
                 >
                     <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-50% font-bold leading-none pb-6 md:text-5xl xl:text-7xl">This is Leo.</h1>
                     <p className="lg:text-lg max-w-[600px]">I&apos;m a Software Engineer Fellow at <strong>
@@ -41,7 +42,6 @@ export default function About() {
                         I love the interactions between technology and people, and I&apos;m currently studying those interactions through Informatics at the 
                     <strong><a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">University of Washington</a></strong> [go dawgs!].</p>
                 </motion.div>
-
             </section>
 
             <section className="flex flex-col my-12 mx-9 sm:mx-20 md:mx-36 lg:mx-48">

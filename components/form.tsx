@@ -106,7 +106,7 @@ export default function Form() {
     };
 
     return (
-        <div className="w-full md:w-3/5 max-w-screen-xl">
+        <div className="w-full md:w-5/6 max-w-screen-xl">
             <form action={''} className="flex flex-col w-full" onSubmit={handleSubmit} noValidate>
                 <div className="flex flex-col mb-3 gap-6 lg:flex-row w-full">
                     <div className="flex flex-col w-full">
