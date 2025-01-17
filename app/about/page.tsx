@@ -72,7 +72,7 @@ export default function About() {
                 </p>
                 <p className="lg:text-lg pb-4">Some cool projects I have worked on previously are 
                     <strong><a href="https://www.youtube.com/watch?v=ovOxPM6D47Y&ab_channel=LeoLi" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">MRI Brain Tumor Classification <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, a MRI classification web application that uses neural networks to classify tumors in various brain MRI scans by constructing different neural network architectures using transfer learning, custom convolutional layers, and the Gemini 1.5 Flash model to generate explanations for the model&apos;s predictions.;{" "}
-                    <strong><a href="https://replit.com/@leowjli/Customer-Churn-Prediction-ML" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">[one of the AI apps] <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
+                    <strong><a href="https://replit.com/@leowjli/Customer-Churn-Prediction-ML" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Customer Bank Churn Prediction <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
                     An end-to-end pipeline for a customer churn prediction model trained with 5 different ML models and performed hyperparameter tuning that explains and predicts whether a customer would churn based on their statistics at the bank.
                 </p>
                 <p className="lg:text-lg">Check out some of the skills I utilized for these fun experiences below!</p>
