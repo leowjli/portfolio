@@ -39,8 +39,8 @@ export default function About() {
                     <p className="lg:text-lg max-w-[600px]">I&apos;m a Software Engineer Fellow at <strong>
                         <a href="https://headstarter.co/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Headstarter <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong> 
                         and a frontend developer passionate about designing and developing solutions that connects information and people together. 
-                        I love the interactions between technology and people, and I&apos;m currently studying those interactions through Informatics at the 
-                    <strong><a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">University of Washington</a></strong> [go dawgs!].</p>
+                        I love the interactions between technology and people, and I&apos;m currently studying those interactions through Informatics at the{" "}
+                    <strong><a href="https://www.washington.edu/" className="hover:underline inline-flex items-center text-[#4B2E83]" target="_blank" rel="noopener noreferrer">University of Washington</a></strong> [<span className="text-[#4B2E83] font-bold">go dawgs!</span>].</p>
                 </motion.div>
             </section>
 
@@ -71,9 +71,9 @@ export default function About() {
                     a professional multidisciplinary design fraternity as a <strong>web developer</strong>, recreating the website and bridging the communication gap between designers and developers, fostering a clearer understanding and a shared vocabulary.
                 </p>
                 <p className="lg:text-lg pb-4">Some cool projects I have worked on previously are 
-                    <strong><a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">___ <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, a ___ web application [that does something];{" "}
-                    <strong><a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">[one of the AI apps] <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
-                    [description].
+                    <strong><a href="https://www.youtube.com/watch?v=ovOxPM6D47Y&ab_channel=LeoLi" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">MRI Brain Tumor Classification <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, a MRI classification web application that uses neural networks to classify tumors in various brain MRI scans by constructing different neural network architectures using transfer learning, custom convolutional layers, and the Gemini 1.5 Flash model to generate explanations for the model&apos;s predictions.;{" "}
+                    <strong><a href="https://replit.com/@leowjli/Customer-Churn-Prediction-ML" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">[one of the AI apps] <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
+                    An end-to-end pipeline for a customer churn prediction model trained with 5 different ML models and performed hyperparameter tuning that explains and predicts whether a customer would churn based on their statistics at the bank.
                 </p>
                 <p className="lg:text-lg">Check out some of the skills I utilized for these fun experiences below!</p>
             </section>
