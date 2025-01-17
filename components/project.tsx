@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function ProjectCard({ path, link, github, title, role, desc, alt }: ProjectCardProps) {
     return (
         <div className="flex flex-col lg:flex-row">
-            <Link href={link} className="w-full lg:max-w-[400px] lg:max-h-[300px]">
+            <Link href={link} target="_blank" rel="noopener noreferrer" className="w-full lg:max-w-[400px] lg:max-h-[300px]">
                 <div className="relative w-full h-[250px] lg:h-full">
                     <Image className="rounded-t-[20px] lg:rounded-tr-none lg:rounded-s-[20px] bg-black object-cover"
                         src={path}
