@@ -67,11 +67,11 @@ export default function About() {
                         where I am also the cultural director, helping advocate and educate others on Chinese culture.
                 </p>
                 <p className="lg:text-lg pb-4">As a frontend developer, working with designers is an essential part of bringing designs to life, I am learning from and working with talented designers at <strong>
-                    <a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Alpha Theta Delta</a></strong>, 
+                    <a href="" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Alpha Theta Delta <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
                     a professional multidisciplinary design fraternity as a <strong>web developer</strong>, recreating the website and bridging the communication gap between designers and developers, fostering a clearer understanding and a shared vocabulary.
                 </p>
-                <p className="lg:text-lg pb-4">Some cool projects I have worked on previously are 
-                    <strong><a href="https://www.youtube.com/watch?v=ovOxPM6D47Y&ab_channel=LeoLi" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">MRI Brain Tumor Classification <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, a MRI classification web application that uses neural networks to classify tumors in various brain MRI scans by constructing different neural network architectures using transfer learning, custom convolutional layers, and the Gemini 1.5 Flash model to generate explanations for the model&apos;s predictions.;{" "}
+                <p className="lg:text-lg pb-4">Some cool projects I have worked on previously are an{" "}
+                    <strong><a href="https://www.youtube.com/watch?v=ovOxPM6D47Y&ab_channel=LeoLi" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer"> MRI Brain Tumor Classification <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, a MRI classification web application that uses neural networks to classify tumors in various brain MRI scans by constructing different neural network architectures using transfer learning, custom convolutional layers, and the Gemini 1.5 Flash model to generate explanations for the model&apos;s predictions.;{" "}
                     <strong><a href="https://replit.com/@leowjli/Customer-Churn-Prediction-ML" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Customer Bank Churn Prediction <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, 
                     An end-to-end pipeline for a customer churn prediction model trained with 5 different ML models and performed hyperparameter tuning that explains and predicts whether a customer would churn based on their statistics at the bank.
                 </p>
@@ -110,9 +110,9 @@ export default function About() {
                     I&apos;m a people-person, and I focus on connections through playing basketball, tossing a frisbee, or eating delicious food. 
                     On my own, I like to hit the gym, doodle goofy ideas, vibe to music (my airpods are in almost all the time), explore nature, play drums, and meet new people!
                     You can also find me playing cymbals with the{" "}
-                    <strong><a href="https://www.huskymarchingband.org/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Husky Drumline<MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong> 
+                    <strong><a href="https://www.instagram.com/uwhuskydrumline/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Husky Drumline<MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong> 
                     and the {" "}
-                    <strong><a href="https://www.instagram.com/uwhuskydrumline/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Husky Marching Band!<MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong
+                    <strong><a href="https://www.huskymarchingband.org/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Husky Marching Band!<MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong
                 ></p>
                 {/* photo gallery! */}
                 <div className="m-10">
