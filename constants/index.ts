@@ -7,7 +7,7 @@ export const navigation = [
         path: '/about'
     }, {
         name: 'Resume',
-        path: 'https://drive.google.com/file/d/152k2bY8VYwnAU0K4KcR41o73HpBriDH-/view?usp=sharing'
+        path: 'https://drive.google.com/file/d/1oE_XW_z5i1_XMEQUE7HqR7etFpjtcI6k/view?usp=sharing'
     }, {
         name: 'Contact',
         path: '/contact'
