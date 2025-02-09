@@ -25,6 +25,15 @@ export const projects = [
         alt: 'Host Haven Stays dashboard page',
     },
     {
+        path: '/bytebunnyai.png',
+        link: 'https://ai-answer-engine-five.vercel.app/',
+        github: 'https://github.com/leowjli/ai-answer-engine',
+        title: 'ByteBunny AI',
+        role: 'Software Engineer',
+        desc: 'An AI Answer Engine built with Next.js and TypeScript that can scrape content from websites and mitigate hallucinations by citing its sources when providing answers. Users can input any website, and the AI Engine will provide a detailed summary of the web content or indicate if it is not scrapeable.',
+        alt: 'Byte Bunny AI Answer Engine Dashboard Interface',
+    },
+    {
         path: '/customer-churn-prediction.png',
         link: 'https://replit.com/@leowjli/Customer-Churn-Prediction-ML',
         github: 'https://github.com/leowjli/CustomerChurnPrediction',
