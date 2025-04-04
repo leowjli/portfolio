@@ -7,7 +7,7 @@ export const navigation = [
         path: '/about'
     }, {
         name: 'Resume',
-        path: 'https://drive.google.com/file/d/1oE_XW_z5i1_XMEQUE7HqR7etFpjtcI6k/view?usp=sharing'
+        path: 'https://drive.google.com/file/d/1CX3DMUTOQDKWlFzFR-2dAV9Ishm5onWw/view?usp=sharing'
     }, {
         name: 'Contact',
         path: '/contact'
@@ -66,7 +66,7 @@ export const projects = [
         github: 'https://github.com/leowjli/LLM-evaluation',
         title: 'LLM Evaluation Platform',
         role: 'Software Engineer',
-        desc: 'A full-stack LLM Evaluation web app that asks users to input prompts where they can subsequently view responses from multiple LLMs side-by-side. The application also shows metrics such as accuracy, relevancy, and response time for each LLM and an analytics dashboard for visualizing performance metrics for different prompts and LLMs',
+        desc: 'A full-stack LLM Evaluation web app that asks users to input prompts and they can subsequently view responses from multiple LLMs side-by-side. The app shows metrics like accuracy, relevancy, and response time for each LLM and an analytics dashboard for visualizing performance metrics for different prompts and LLMs',
         alt: 'llm evaluation platform dashboard with some data',
     },
     {
@@ -130,6 +130,11 @@ export const skills = [
     {
         name: 'Next JS',
         svgPath: '/nextjs.png',
+        alt: '',
+    },
+    {
+        name: 'AWS',
+        svgPath: '/aws.png',
         alt: '',
     },
     {
