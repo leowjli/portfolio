@@ -211,7 +211,7 @@ export const gallery = [
     "/action-shot.jpg",
     "/cymbal-section.JPG",
     "/snare-gp.jpg",
-    "/fam-tree-csa.jpg",
+    "/fam-tree-csa.JPG",
     "/rooftop-w-friends.JPG",
     "/ewww.jpg",
     "/info-hoodie.jpg",
