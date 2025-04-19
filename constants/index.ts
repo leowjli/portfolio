@@ -80,7 +80,7 @@ export const projects = [
     },
     {
         path: '/budget-buddy.png',
-        link: '',
+        link: 'https://budget-buddy-441-edbjbgbzexchh5hx.centralus-01.azurewebsites.net/',
         github: 'https://github.com/sushiroll-206/budget_buddy',
         title: 'Budget Buddy',
         role: 'Software Engineer',

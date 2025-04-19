@@ -17,7 +17,7 @@ export function ProjectCard({ path, link, github, title, role, desc, alt }: Proj
                 </div>
             </Link>
             <div className="flex flex-col justify-start mx-10 mt-1 mb-4 max-w-full overflow-hidden">
-                <h2 className="sm:text-xl md:text-2xl lg:text-3xl font-semibold mt-3 md:mt-6 lg:mt-10">{title}</h2>
+                <Link href={link} target="_blank" rel="noopener noreferrer"><h2 className="sm:text-xl md:text-2xl lg:text-3xl font-semibold mt-3 md:mt-6 lg:mt-10 hover:underline">{title}</h2></Link>
                 <p className="lg:text-lg mb-3">{role}</p>
                 <p className="mb-3 lg:text-lg lg:mt-5 break-words">{desc}</p>
                 <div className={`${github && link ? "flex gap-5" : ""}`}>
