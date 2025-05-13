@@ -36,11 +36,12 @@ export default function About() {
                     transition={{ delay: 1, duration: 0.5, ease: easeIn }}
                 >
                     <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-50% font-bold leading-none pb-6 md:text-5xl xl:text-7xl">This is Leo.</h1>
-                    <p className="lg:text-lg max-w-[600px]">I&apos;m a Software Engineer Fellow at <strong>
-                        <a href="https://headstarter.co/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Headstarter <MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong> 
+                    <p className="lg:text-lg max-w-[600px]">
+                        I&apos;m a Software Engineer Intern at Host Haven and a ex-Software Engineer Fellow at <strong>
+                        <a href="https://headstarter.co/" className="hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">Headstarter<MdArrowOutward className="w-4 h-4 lg:w-5 lg:h-5" /></a></strong>, {" "}
                         and a frontend developer passionate about designing and developing solutions that connects information and people together. 
                         I love the interactions between technology and people, and I&apos;m currently studying those interactions through Informatics at the{" "}
-                    <strong><a href="https://www.washington.edu/" className="hover:underline inline-flex items-center text-[#4B2E83]" target="_blank" rel="noopener noreferrer">University of Washington</a></strong> [<span className="text-[#4B2E83] font-bold">go dawgs!</span>].</p>
+                    <strong><a href="https://www.washington.edu/" className="hover:underline inline-flex items-center text-[#4B2E83]" target="_blank" rel="noopener noreferrer">University of Washington [<span className="text-[#4B2E83] font-bold">go dawgs!</span>].</a></strong></p>
                 </motion.div>
             </section>
 

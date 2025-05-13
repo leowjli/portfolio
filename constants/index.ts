@@ -16,21 +16,12 @@ export const navigation = [
 
 export const projects = [
     {
-        path: '/hosthaven.png',
-        link: '',
-        github: '',
-        title: 'Host Haven Stays',
-        role: 'Full-stack Developer',
-        desc: 'Coming soon...',
-        alt: 'Host Haven Stays dashboard page',
-    },
-    {
         path: '/bytebunnyai.png',
         link: 'https://ai-answer-engine-five.vercel.app/',
         github: 'https://github.com/leowjli/ai-answer-engine',
         title: 'ByteBunny AI',
         role: 'Software Engineer',
-        desc: 'An AI Answer Engine built with Next.js and TypeScript that can scrape content from websites and mitigate hallucinations by citing its sources when providing answers. Users can input any website, and the AI Engine will provide a detailed summary of the web content or indicate if it is not scrapeable.',
+        desc: 'Scrape any site and get AI-powered answers with real source citations, with your bunny buddy.',
         alt: 'Byte Bunny AI Answer Engine Dashboard Interface',
     },
     {
@@ -39,7 +30,7 @@ export const projects = [
         github: 'https://github.com/leowjli/CustomerChurnPrediction',
         title: 'Customer Bank Churn Prediction',
         role: 'Software Engineer',
-        desc: 'An end-to-end pipeline for a customer churn prediction model, where I loaded and cleaned the dataset, cleaned the data, trained 5 different ML models, performed hyperparameter tuning, and served the model for inference through a web app.',
+        desc: 'Predict which customers will leave your bank using machine learning and interactive inference.',
         alt: 'Customer Bank Churn Prediction application dashboard',
     },
     {
@@ -48,7 +39,7 @@ export const projects = [
         github: 'https://github.com/leowjli/brain-tumor-classification',
         title: 'MRI Brain Tumor Classification',
         role: 'Software/AI Engineer',
-        desc: "A brain tumor classification app that uses neural networks to classify tumors in various brain MRI scans by constructing different neural network architectures using transfer learning, custom convolutional layers, and the Gemini 1.5 Flash model to generate explanations for the model's predictions.",
+        desc: 'Diagnose brain tumors in MRI scans with deep learning and Gemini-powered AI explanations.',
         alt: 'brain tumor classification web app dashboard',
     },
     {
@@ -57,7 +48,7 @@ export const projects = [
         github: 'https://github.com/leowjli/SecureAgent',
         title: 'PR Review Agent',
         role: 'Software Engineer',
-        desc: 'An AI PR reivew agent that looks at your pull request and gives feedback on how to improve it',
+        desc: 'Get instant, intelligent feedback on your pull requests with this AI review companion.',
         alt: 'PR review agent application dashboard',
     },
     {
@@ -66,7 +57,7 @@ export const projects = [
         github: 'https://github.com/leowjli/LLM-evaluation',
         title: 'LLM Evaluation Platform',
         role: 'Software Engineer',
-        desc: 'A full-stack LLM Evaluation web app that asks users to input prompts and they can subsequently view responses from multiple LLMs side-by-side. The app shows metrics like accuracy, relevancy, and response time for each LLM and an analytics dashboard for visualizing performance metrics for different prompts and LLMs',
+        desc: 'Compare multiple LLMs side-by-side with real metrics, prompts, and performance insights.',
         alt: 'llm evaluation platform dashboard with some data',
     },
     {
@@ -75,7 +66,7 @@ export const projects = [
         github: 'https://github.com/UW-INFO442-AU24/joblessInSeattle',
         title: 'DayMax',
         role: 'Software Engineer',
-        desc: 'A health journal app promoting self-care and personal health by encouraging college students to keep track of their health habits and monitoring ongoing health issues.',
+        desc: 'Track habits and take control of your mental and physical health with this student-built journal.',
         alt: 'DayMax Health management app dashboard',
     },
     {
@@ -84,7 +75,7 @@ export const projects = [
         github: 'https://github.com/sushiroll-206/budget_buddy',
         title: 'Budget Buddy',
         role: 'Software Engineer',
-        desc: "A financial wellness application that provides budgeting resources to people who want to budget but don't know how to do it properly; or alternatively, budget aware individuals who want to have an easier budgeting experience and want to compare their budget alongside other users.",
+        desc: 'Make budgeting less stressful and more social—compare spendings with others and set goals with ease.',
         alt: 'budget buddy financial web app dashboard',
     },
     {
@@ -93,8 +84,26 @@ export const projects = [
         github: '',
         title: 'Chinese Student Association',
         role: 'Software Engineer',
-        desc: 'Chinese Student Association @ UW, dedicated to encouraging a greater awareness of Chinese culture, cultivating Chinese and Chinese American identity, and promoting a meaningful relationship within the University and the community at large.',
+        desc: 'Celebrate culture and build community through the digital home of UW’s CSA chapter.',
         alt: 'Chinese Student Association website image with officer board',
+    },
+    {
+        path: '/hosthaven.png',
+        link: '',
+        github: '',
+        title: 'Host Haven Stays',
+        role: 'Full-stack Developer',
+        desc: 'In development. Coming soon...',
+        alt: 'Host Haven Stays dashboard page',
+    },
+    {
+        path: '/archive.png',
+        link: '',
+        github: 'https://www.github.com/leowjli/',
+        title: 'More Projects!',
+        role: 'Tech Bro-ing',
+        desc: '',
+        alt: 'project archive card linked to github',
     },
 ];
 
