@@ -19,6 +19,17 @@ export default function Navbar() {
     };
 
     useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 598) {
+                setIsOpen(false);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
         if(prevPath !== path) {
             setIsRouting(true);
         }
@@ -45,7 +56,7 @@ export default function Navbar() {
                 {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
             </button>
 
-            <nav className={`md:justify-items-center md:flex ${isOpen ? 'fixed z-50 top-[72px] left-0 right-0 bg-blue-400/20 backdrop-blur-lg w-full block transition-all duration-500' : 'hidden'}`}>
+            <nav className={`md:justify-items-center md:flex ${isOpen ? 'fixed z-50 top-[72px] left-0 right-0 bg-blue-400/20 backdrop-blur-lg w-full block transition-all duration-500' : 'hidden md:block'}`}>
                 <ul className="md:flex space-x-0 lg:space-x-2 xl:space-x-6">
                     {navigation.map((nav_item, id) => {
                         return (

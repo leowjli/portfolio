@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <main className="w-full h-screen flex flex-col relative">
             <Navbar />
-            <div className="intro-container flex flex-col justify-start my-56 mx-9 sm:mx-20 md:mx-36 lg:mx-48 relative">
+            <div className="intro-container flex flex-col justify-start my-52 mx-9 sm:mx-20 md:mx-36 lg:mx-48 relative">
                 <div className="intro flex flex-col justify-start">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
