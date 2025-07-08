@@ -7,7 +7,7 @@ export const navigation = [
         path: '/about'
     }, {
         name: 'Resume',
-        path: 'https://drive.google.com/file/d/1CX3DMUTOQDKWlFzFR-2dAV9Ishm5onWw/view?usp=sharing'
+        path: 'https://drive.google.com/file/d/168f34lvcsLup3VyZCt5UGPfzc_xV5Q_R/view?usp=sharing'
     }, {
         name: 'Contact',
         path: '/contact'
@@ -15,6 +15,15 @@ export const navigation = [
 ];
 
 export const projects = [
+    {
+        path: '/hosthaven.png',
+        link: 'https://www.hosthavenstays.com/',
+        github: '',
+        title: 'Host Haven Stays',
+        role: 'Full-stack Developer',
+        desc: 'A short-term rental management platform for hosts to gain automated financial insights, manage their properties, bookings, and guests.',
+        alt: 'Host Haven Stays client side dashboard interface',
+    },
     {
         path: '/bytebunnyai.png',
         link: 'https://ai-answer-engine-five.vercel.app/',
@@ -86,15 +95,6 @@ export const projects = [
         role: 'Software Engineer',
         desc: 'Celebrate culture and build community through the digital home of UW’s CSA chapter.',
         alt: 'Chinese Student Association website image with officer board',
-    },
-    {
-        path: '/hosthaven.png',
-        link: '',
-        github: '',
-        title: 'Host Haven Stays',
-        role: 'Full-stack Developer',
-        desc: 'In development. Coming soon...',
-        alt: 'Host Haven Stays dashboard page',
     },
     {
         path: '/archive.png',
