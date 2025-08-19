@@ -3,17 +3,89 @@
 @tailwind utilities;
 
 @layer utilities {
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
     }
-  
-    .animate-scroll {
-      animation: scroll 50s linear infinite;
+
+    to {
+      transform: translateX(-50%);
     }
   }
-  
+
+  .animate-scroll {
+    animation: scroll 50s linear infinite;
+  }
+}
+
+/* Editor theme tokens */
+:root {
+  --editor-bg: #0f1115;
+  --panel-border: #1b1f2a;
+  --gutter-bg: #0b0d12;
+  --text-default: #e6e6e6;
+  --comment: #9aa4b2;
+  --keyword: #c678dd;
+  --string: #98c379;
+  --number: #d19a66;
+  --punc: #7f8ea3;
+}
+
+/* Editor block */
+.editor {
+  background: var(--editor-bg);
+  caret-color: var(--text-default);
+}
+
+.editor ::selection {
+  background: rgba(91, 156, 255, 0.25);
+}
+
+/* Custom scrollbars */
+.editor::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background: #1d2430;
+  border-radius: 999px;
+}
+
+.editor::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .tok-keyword {
+    @apply text-[var(--keyword)];
+  }
+
+  .tok-string {
+    @apply text-[var(--string)];
+  }
+
+  .tok-number {
+    @apply text-[var(--number)];
+  }
+
+  .tok-comment {
+    @apply text-[var(--comment)];
+  }
+
+  .tok-punc {
+    @apply text-[var(--punc)];
+  }
+
+  .gutter {
+    @apply sticky left-0 pl-3 bg-[var(--gutter-bg)] border-r border-[var(--panel-border)];
+  }
+
+  .tab {
+    @apply snap-start rounded-md px-3 py-1.5 text-xs sm:text-sm text-[var(--text-default)] opacity-50 hover:opacity-100 bg-transparent border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5b9cff];
+  }
+
+  .tab-active {
+    @apply text-[var(--text-default)] opacity-100 border-[var(--panel-border)] bg-[#141823];
+  }
+}

@@ -35,7 +35,7 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.5, ease: easeIn }}
                     >
-                        <p className="intro-headline text-base font-medium md:text-lg xl:text-2xl">An aspiring frontend developer + Informatics student @ UW</p>
+                        <p className="intro-headline text-base font-medium md:text-lg xl:text-2xl">Software developer @ Tactical Affairs</p>
                     </motion.div>
                 </div>
                 <div className="mouse-section absolute hidden left-1/2 transform -translate-x-1/2 sm:block sm:top-52 lg:top-60">

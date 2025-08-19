@@ -5,7 +5,7 @@ import { projects } from '@/constants';
 type ProjectType = typeof projects[number];
 
 const chunkProjects = (projects: ProjectType[]) => {
-  const pattern = [2, 3]; // repeat 2-3-2-3
+  const pattern = [2]; // repeat 2-3-2-3
   const chunks = [];
   let start = 0;
   let i = 0;
@@ -30,9 +30,9 @@ const ProjectGridRow = ({ chunk }: { chunk: ProjectType[] }) => {
           gap-x-6 gap-y-4 my-5 sm:mx-10 md:mx-24 items-stretch
         `}
       >
-        {chunk.map((project, index) => (
+        {chunk.map((project) => (
           <motion.div
-            key={index}
+            key={project.title}
             className="flex"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{

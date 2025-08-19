@@ -15,7 +15,18 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Leo's Portfolio",
+  title: "Leo Li | Portfolio",
+  keywords: [
+    "Leo Li",
+    "Portfolio", 
+    "Software Engineer",
+    "Frontend Developer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+  ],
   description: "Welcome to my portfolio",
 };
 
