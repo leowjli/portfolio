@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "./tag";
+import Tag from "./Tag";
 
 interface ProjectCardProps {
   path: string
@@ -16,7 +16,7 @@ interface ProjectCardProps {
 export function ProjectCard({ path, link, github, title, role, desc, alt, tags = [] }: ProjectCardProps) {
   // lg:flex-row
   return (
-    <div className="flex flex-col h-full w-full justify-start bg-white rounded-lg shadow-lg border border-black/10 hover:shadow-xl transition-all duration-300 overflow-hidden">
+    <div className="flex flex-col h-full w-full justify-start bg-card rounded-lg shadow-lg border border-border hover:shadow-xl transition-all duration-300 overflow-hidden">
       {/* image section */}
       <Link href={link} target="_blank" rel="noopener noreferrer" className="w-full h-[200px] lg:h-[250px] relative">
         <Image src={path} fill alt={alt} className="object-cover" />
@@ -27,11 +27,11 @@ export function ProjectCard({ path, link, github, title, role, desc, alt, tags =
         <div className="flex flex-col">
           <Link href={link} target="_blank" rel="noopener noreferrer">
             <div className="flex flex-col lg:flex-row lg:items-end pt-5 pb-2 gap-2">
-              <h2 className="sm:text-xl md:text-2xl font-semibold hover:underline">{title}</h2>
-              <p className="md:text-md lg:text-lg lg:ml-1 text-gray-500">{role}</p>
+              <h2 className="sm:text-xl md:text-2xl font-semibold hover:underline text-foreground">{title}</h2>
+              <p className="md:text-md lg:text-lg lg:ml-1 text-secondary">{role}</p>
             </div>
           </Link>
-          <p className="mb-4 lg:text-lg break-words"><em>{desc}</em></p>
+          <p className="mb-4 lg:text-lg break-words text-secondary"><em>{desc}</em></p>
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
               {tags.map((t) => (
@@ -41,20 +41,17 @@ export function ProjectCard({ path, link, github, title, role, desc, alt, tags =
           )}
         </div>
 
-        {/* tags */}
-
-
         {/* buttons */}
         {(github || link) && (
           <div className="flex gap-4 mt-auto pt-2">
             {github && (
               <Link href={github} target="_blank" rel="noopener noreferrer">
-                <p className="text-sm lg:text-base px-3 py-1 border border-black rounded-lg max-w-fit">GitHub</p>
+                <p className="text-sm lg:text-base px-3 py-1 border border-border rounded-lg max-w-fit text-foreground hover:bg-muted transition-colors">GitHub</p>
               </Link>
             )}
             {link && (
               <Link href={link} target="_blank" rel="noopener noreferrer">
-                <p className="text-sm lg:text-base px-3 py-1 border border-black rounded-lg max-w-fit">Live Demo</p>
+                <p className="text-sm lg:text-base px-3 py-1 border border-border rounded-lg max-w-fit text-foreground hover:bg-muted transition-colors">Live Demo</p>
               </Link>
             )}
           </div>

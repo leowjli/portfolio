@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #000000;
+    --secondary: #6b7280;
+    --accent: #398eeb;
+    --muted: #f3f4f6;
+    --border: #e5e7eb;
+    --card: #ffffff;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ffffff;
+    --primary: #ffffff;
+    --secondary: #9ca3af;
+    --accent: #60a5fa;
+    --muted: #1f2937;
+    --border: #374151;
+    --card: #111111;
+  }
+}
+
 @layer utilities {
   @keyframes scroll {
     from {

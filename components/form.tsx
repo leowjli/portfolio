@@ -110,7 +110,7 @@ export default function Form() {
       <form action={''} className="flex flex-col w-full" onSubmit={handleSubmit} noValidate>
         <div className="flex flex-col mb-3 gap-6 lg:flex-row w-full">
           <div className="flex flex-col w-full">
-            <label htmlFor="fname" className="mb-0.5 text-sm font-medium text-gray-900">
+            <label htmlFor="fname" className="mb-0.5 text-sm font-medium text-foreground">
               First Name <span className="text-red-600">*</span>
             </label>
             <input
@@ -118,7 +118,7 @@ export default function Form() {
               id="fname"
               value={fname}
               onChange={(e) => setFName(e.target.value)}
-              className={`bg-gray-200 border ${err.fname ? "border-red-400" : "border-gray-400"} p-2 rounded-lg w-full`}
+              className={`bg-muted border ${err.fname ? "border-red-400" : "border-border"} p-2 rounded-lg w-full text-foreground`}
               placeholder="Stephen"
               required
             />
@@ -126,7 +126,7 @@ export default function Form() {
           </div>
 
           <div className="flex flex-col w-full">
-            <label htmlFor="lname" className="mb-0.5 text-sm font-medium text-gray-900">
+            <label htmlFor="lname" className="mb-0.5 text-sm font-medium text-foreground">
               Last Name <span className="text-red-600">*</span>
             </label>
             <input
@@ -134,7 +134,7 @@ export default function Form() {
               id="lname"
               value={lname}
               onChange={(e) => setLName(e.target.value)}
-              className={`bg-gray-200 border ${err.lname ? "border-red-400" : "border-gray-400"} p-2 rounded-lg w-full`}
+              className={`bg-muted border ${err.lname ? "border-red-400" : "border-border"} p-2 rounded-lg w-full text-foreground`}
               placeholder="Curry"
               required
             />
@@ -143,7 +143,7 @@ export default function Form() {
         </div>
         <div className="flex flex-col mb-3 gap-6 lg:flex-row w-full">
           <div className="flex flex-col w-full">
-            <label htmlFor="email" className="mb-0.5 text-sm font-medium text-gray-900">
+            <label htmlFor="email" className="mb-0.5 text-sm font-medium text-foreground">
               Email <span className="text-red-600">*</span>
             </label>
             <input
@@ -151,7 +151,7 @@ export default function Form() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`bg-gray-200 border ${err.email ? "border-red-400" : "border-gray-400"} p-2 rounded-lg w-full`}
+              className={`bg-muted border ${err.email ? "border-red-400" : "border-border"} p-2 rounded-lg w-full text-foreground`}
               placeholder="sc30@gmail.com"
               required
             />
@@ -159,7 +159,7 @@ export default function Form() {
           </div>
 
           <div className="flex flex-col w-full">
-            <label htmlFor="phone" className="mb-0.5 text-sm font-medium text-gray-900">
+            <label htmlFor="phone" className="mb-0.5 text-sm font-medium text-foreground">
               Phone Number <span className="text-red-600">*</span>
             </label>
             <input
@@ -167,7 +167,7 @@ export default function Form() {
               id="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className={`bg-gray-200 border ${err.phone ? "border-red-400" : "border-gray-400"} p-2 rounded-lg w-full`}
+              className={`bg-muted border ${err.phone ? "border-red-400" : "border-border"} p-2 rounded-lg w-full text-foreground`}
               placeholder="123-456-7890"
               required
             />
@@ -175,7 +175,7 @@ export default function Form() {
           </div>
         </div>
         <div className="flex flex-col mb-3">
-          <label htmlFor="message" className="mb-0.5 text-sm font-medium text-gray-900">
+          <label htmlFor="message" className="mb-0.5 text-sm font-medium text-foreground">
             Message <span className="text-red-600">*</span>
           </label>
           <textarea
@@ -183,7 +183,7 @@ export default function Form() {
             rows={9}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={`bg-gray-200 border ${err.message ? "border-red-400" : "border-gray-400"} p-2 rounded-lg w-full`}
+            className={`bg-muted border ${err.message ? "border-red-400" : "border-border"} p-2 rounded-lg w-full text-foreground`}
             placeholder="What's on your mind?"
             required
           />

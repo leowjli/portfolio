@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Transition from "@/components/transitions";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,9 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <Transition>{children}</Transition>
+        <ThemeProvider>
+          <Transition>
+            {children}
+          </Transition>
+        </ThemeProvider>
       </body>
     </html>
   );

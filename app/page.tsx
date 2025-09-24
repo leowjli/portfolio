@@ -1,8 +1,8 @@
 "use client";
 
-import Navbar from "@/components/navbar";
-import Project from "@/components/project";
-import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import Project from "@/components/Project";
+import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { easeIn, motion } from 'framer-motion';
 // import Image from "next/image";
@@ -19,8 +19,8 @@ export default function Home() {
                         transition={{ duration: 0.5, ease: easeIn }}
                     >
                         <div className="flex gap-5">
-                            <h1 className="intro-content text-4xl font-bold md:text-5xl xl:text-7xl">你好!</h1>
-                            <h1 className="intro-content text-4xl font-bold md:text-5xl xl:text-7xl">Hello!</h1>
+                            <h1 className="intro-content text-4xl font-bold md:text-5xl xl:text-7xl text-foreground">你好!</h1>
+                            <h1 className="intro-content text-4xl font-bold md:text-5xl xl:text-7xl text-foreground">Hello!</h1>
                         </div>
                     </motion.div>
                     <motion.div
@@ -35,12 +35,12 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.5, ease: easeIn }}
                     >
-                        <p className="intro-headline text-base font-medium md:text-lg xl:text-2xl">Software developer @ Tactical Affairs</p>
+                        <p className="intro-headline text-base font-medium md:text-lg xl:text-2xl text-secondary">Software developer @ Tactical Affairs</p>
                     </motion.div>
                 </div>
                 <div className="mouse-section absolute hidden left-1/2 transform -translate-x-1/2 sm:block sm:top-52 lg:top-60">
-                    <div className="mouse w-[30px] h-[54px] border-[3px] border-black rounded-[60px] ">
-                        <span className="before:content-[''] before:w-2 before:h-2 before:absolute before:top-[10px] before:bg-black before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:opacity-100 before:animate-mouse" />
+                    <div className="mouse w-[30px] h-[54px] border-[3px] border-foreground rounded-[60px] ">
+                        <span className="before:content-[''] before:w-2 before:h-2 before:absolute before:top-[10px] before:bg-foreground before:left-1/2 before:transform before:-translate-x-1/2 before:rounded-[50%] before:opacity-100 before:animate-mouse" />
                     </div>
                 </div>
             </div>
