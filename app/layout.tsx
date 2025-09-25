@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Transition from "@/components/transitions";
+import Transition from "@/components/Transitions";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const geistSans = localFont({
