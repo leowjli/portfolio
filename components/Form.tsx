@@ -78,7 +78,7 @@ export default function Form() {
           message,
         };
 
-        const res = await fetch('/api/route', {
+        const res = await fetch('/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
