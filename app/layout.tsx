@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Transition from "@/components/transitions";
+import Transition from "@/components/Transitions";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,18 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Leo's Portfolio",
+  title: "Leo Li | Portfolio",
+  keywords: [
+    "Leo Li",
+    "Portfolio", 
+    "Software Engineer",
+    "Frontend Developer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+  ],
   description: "Welcome to my portfolio",
 };
 
@@ -27,9 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <Transition>{children}</Transition>
+        <ThemeProvider>
+          <Transition>
+            {children}
+          </Transition>
+        </ThemeProvider>
       </body>
     </html>
   );
