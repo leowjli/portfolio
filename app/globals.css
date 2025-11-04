@@ -12,6 +12,9 @@
     --muted: #f3f4f6;
     --border: #e5e7eb;
     --card: #ffffff;
+    --surface: #ffffff;
+    --subtle: #91949a;
+    --chip: #f3f4f6;
   }
 
   .dark {
@@ -19,10 +22,13 @@
     --foreground: #ffffff;
     --primary: #ffffff;
     --secondary: #9ca3af;
-    --accent: #60a5fa;
+    --accent: #83b9fb;
     --muted: #1f2937;
     --border: #374151;
     --card: #111111;
+    --surface: #111111;
+    --subtle: #6b7280;
+    --chip: #1f2937;
   }
 }
 
