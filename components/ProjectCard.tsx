@@ -31,7 +31,9 @@ export function ProjectCard({ path, link, github, title, role, desc, why, alt, t
       initial="initial"
       whileHover="hover"
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="group relative flex flex-col h-full w-full justify-start bg-surface rounded-2xl shadow-lg border border-border hover:shadow-glow transition-shadow duration-300 overflow-hidden cursor-pointer"
+      className="group relative flex flex-col h-full w-full justify-start 
+      bg-surface rounded-2xl shadow-lg border border-border 
+      hover:shadow-glow transition-shadow duration-300 overflow-hidden cursor-pointer"
     >
       {/* image section */}
       <div className="w-full h-[200px] lg:h-[250px] relative">
@@ -55,8 +57,10 @@ export function ProjectCard({ path, link, github, title, role, desc, why, alt, t
 
       {/* Hover Overlay with glassmorphism */}
       <div className="pointer-events-none absolute inset-0 flex items-end justify-center p-3">
-        <div className="pointer-events-auto w-full h-fit rounded-2xl border border-white/30 dark:border-white/20 bg-gradient-to-t from-white/90 via-white/70 to-white/50 dark:from-black/80 dark:via-black/60 dark:to-black/40 backdrop-blur-xl p-6 shadow-2xl flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <h2 className="sm:text-xl font-semibold text-accent group-hover:from-accent group-hover:to-foreground transition-all duration-300">{title}</h2>
+        <div className="pointer-events-auto w-full h-fit rounded-2xl bg-gradient-to-t from-gray-300 via-white/40 to-white
+         dark:from-black/10 dark:via-black/20 dark:to-black/70 backdrop-blur-xl 
+         p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h2 className="sm:text-xl font-semibold text-accent">{title}</h2>
           {/* <p className="md:text-base text-foreground mb-2">{role}</p> */}
 
           {desc && (
@@ -78,7 +82,7 @@ export function ProjectCard({ path, link, github, title, role, desc, why, alt, t
             <div className="flex gap-4 mt-2">
               {github && (
                 <Link href={github} target="_blank" rel="noopener noreferrer">
-                  <p className="text-sm lg:text-base px-3 py-1 border border-border dark:border-white/30 rounded-lg max-w-fit text-foreground dark:text-white hover:bg-muted dark:hover:bg-white/20 transition-colors">
+                  <p className="text-sm lg:text-base px-3 py-1 border border-black/30 dark:border-white/30 rounded-lg max-w-fit text-foreground dark:text-white hover:bg-muted dark:hover:bg-white/20 transition-colors">
                     GitHub
                   </p>
                 </Link>

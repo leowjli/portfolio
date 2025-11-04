@@ -56,7 +56,7 @@ export default function Project() {
   const chunks = chunkProjects(projects);
 
   return (
-    <section>
+    <section className="mt-10 sm:mt-20 mx-5">
       {chunks.map((chunk, idx) => (
         <ProjectGridRow chunk={chunk} key={idx} />
       ))}

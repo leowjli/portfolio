@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [path, isRouting]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-12 py-6 ${isOpen ? "bg-muted" : "bg-background/80 backdrop-blur-md"} border-b border-border`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 sm:pl-16 sm:pr-8 py-6 ${isOpen ? "bg-muted" : "bg-background/80 backdrop-blur-md"} border-b border-border`}>
 
       <Link href="/">
         <p className="text-base font-medium text-foreground">Leo Li</p>
@@ -60,7 +60,7 @@ export default function Navbar() {
             {navigation.map((nav_item, id) => {
               return (
                 <Link className="transition-all duration-500 ease-in" href={nav_item.path} key={id} target={nav_item.name === "Resume" ? "_blank" : "_self"}>
-                  <p className={`text-center text-base p-2 hover:border-b-2 ${path === nav_item.path ? "text-accent font-semibold hover:border-accent" : "text-foreground font-medium hover:border-foreground"}`}>{nav_item.name}</p>
+                  <p className={`text-center text-base p-2 border-b-2 border-transparent ${path === nav_item.path ? "text-accent font-semibold hover:border-accent" : "text-foreground font-medium hover:border-foreground"}`}>{nav_item.name}</p>
                 </Link>
               )
             })}

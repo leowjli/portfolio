@@ -22,7 +22,7 @@
     --foreground: #ffffff;
     --primary: #ffffff;
     --secondary: #9ca3af;
-    --accent: #83b9fb;
+    --accent: #5b9cff;
     --muted: #1f2937;
     --border: #374151;
     --card: #111111;
@@ -33,6 +33,19 @@
 }
 
 @layer utilities {
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
   @keyframes scroll {
     from {
       transform: translateX(0);
@@ -45,6 +58,90 @@
 
   .animate-scroll {
     animation: scroll 50s linear infinite;
+  }
+
+  /* Hero shimmer animation for gradient text */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 8s ease-in-out infinite;
+  }
+
+  /* Mouse scroll indicator animation */
+  @keyframes mouse {
+    0% {
+      opacity: 0;
+      top: 10px;
+    }
+    100% {
+      opacity: 1;
+      top: 30px;
+    }
+  }
+
+  .animate-mouse {
+    animation: mouse 2s linear infinite;
+  }
+
+  /* Ambient blob motion - organic wandering paths (inner element animation) */
+  @keyframes blob-wander-a {
+    0%   { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
+    12%  { transform: translate(8vw, -6vh)    scale(1.06); opacity: 0.55; }
+    25%  { transform: translate(16vw, 4vh)    scale(1.1);  opacity: 0.6; }
+    37%  { transform: translate(22vw, -2vh)   scale(1.04); opacity: 0.54; }
+    50%  { transform: translate(14vw, 8vh)    scale(1.08); opacity: 0.58; }
+    62%  { transform: translate(6vw, 2vh)     scale(0.98); opacity: 0.48; }
+    75%  { transform: translate(18vw, 10vh)   scale(1.05); opacity: 0.56; }
+    87%  { transform: translate(10vw, -4vh)   scale(1.02); opacity: 0.52; }
+    100% { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
+  }
+
+  .animate-blob-wander-a {
+    animation: blob-wander-a 28s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Alternate wandering paths */
+  @keyframes blob-wander-b {
+    0%   { transform: translate(0, 0)        scale(1);   opacity: 0.45; }
+    10%  { transform: translate(-6vw, -4vh)   scale(1.03); opacity: 0.5; }
+    22%  { transform: translate(-14vw, 6vh)   scale(1.08); opacity: 0.56; }
+    35%  { transform: translate(-20vw, -2vh)  scale(1.02); opacity: 0.5; }
+    50%  { transform: translate(-12vw, 10vh)  scale(1.06); opacity: 0.54; }
+    66%  { transform: translate(-4vw, -6vh)   scale(0.98); opacity: 0.46; }
+    78%  { transform: translate(-18vw, 4vh)   scale(1.05); opacity: 0.52; }
+    90%  { transform: translate(-8vw, -2vh)   scale(1.01); opacity: 0.48; }
+    100% { transform: translate(0, 0)        scale(1);   opacity: 0.45; }
+  }
+
+  @keyframes blob-wander-c {
+    0%   { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
+    12%  { transform: translate(6vw, 6vh)     scale(1.04); opacity: 0.54; }
+    24%  { transform: translate(-8vw, 10vh)   scale(1.08); opacity: 0.6; }
+    36%  { transform: translate(12vw, -8vh)   scale(1.02); opacity: 0.52; }
+    50%  { transform: translate(-14vw, -4vh)  scale(1.06); opacity: 0.56; }
+    64%  { transform: translate(18vw, 6vh)    scale(1.03); opacity: 0.53; }
+    76%  { transform: translate(-10vw, 8vh)   scale(1.07); opacity: 0.57; }
+    88%  { transform: translate(8vw, -6vh)    scale(1.01); opacity: 0.51; }
+    100% { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
+  }
+
+  .animate-blob-wander-b {
+    animation: blob-wander-b 32s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-blob-wander-c {
+    animation: blob-wander-c 36s ease-in-out infinite;
+    will-change: transform;
   }
 }
 
@@ -112,7 +209,11 @@
   }
 
   .tab {
-    @apply snap-start rounded-md px-3 py-1.5 text-xs sm:text-sm text-[var(--text-default)] opacity-50 hover:opacity-100 bg-transparent border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5b9cff];
+    @apply 
+    snap-start rounded-md px-3 py-1.5 text-xs sm:text-sm 
+    text-[var(--text-default)] opacity-50 hover:opacity-100 
+    bg-transparent border border-transparent 
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5b9cff];
   }
 
   .tab-active {
