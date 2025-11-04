@@ -149,8 +149,8 @@ export default function Hero() {
 
       {/* Language toggle */}
       <div
-        className="hidden sm:flex absolute top-24 right-8 z-10 items-center gap-2 p-1 rounded-lg
-        bg-surface/60 dark:bg-surface/40 backdrop-blur-md border border-border/50 dark:border-border"
+        className="fixed top-24 right-6 sm:right-8 z-20 flex items-center gap-2 p-1 rounded-lg
+        bg-surface/80 dark:bg-surface/60 backdrop-blur-md border border-border/50 dark:border-border shadow-lg"
         role="group"
         aria-label="Language selector"
       >
@@ -304,40 +304,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile language toggle */}
-      <div
-        className="sm:hidden fixed bottom-8 right-8 z-20 flex items-center gap-2 p-1 rounded-lg
-        bg-surface/90 dark:bg-surface/70 backdrop-blur-md border border-border/50 dark:border-border/30 shadow-lg"
-        role="group"
-        aria-label="Language selector"
-      >
-        <button
-          onClick={() => switchLanguage('en')}
-          className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-accent
-          ${lang === 'en'
-            ? 'bg-accent text-white shadow-sm'
-            : 'text-secondary hover:text-foreground hover:bg-muted/50'
-          }`}
-          aria-pressed={lang === 'en'}
-          aria-label="Switch to English"
-        >
-          EN
-        </button>
-        <button
-          onClick={() => switchLanguage('zh')}
-          className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-accent
-          ${lang === 'zh'
-            ? 'bg-accent text-white shadow-sm'
-            : 'text-secondary hover:text-foreground hover:bg-muted/50'
-          }`}
-          aria-pressed={lang === 'zh'}
-          aria-label="切换到中文"
-        >
-          中文
-        </button>
-      </div>
     </section>
   );
 }
