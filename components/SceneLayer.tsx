@@ -76,7 +76,7 @@ export default function SceneLayer({
       style={{ opacity }}
     >
       {/* Content Grid */}
-      <div className="w-full h-full grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-0">
+      <div className="w-full h-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-0">
         {/* Left Column */}
         <div
           className="flex flex-col justify-start m-6 sm:mx-16 sm:mt-32
@@ -90,7 +90,7 @@ export default function SceneLayer({
         </div>
 
         {/* Center column - with paper background */}
-        <div className="hidden lg:block relative w-20 xl:w-28" aria-hidden="true" />
+        <div className="hidden md:block relative w-12 lg:w-20 xl:w-28" aria-hidden="true" />
 
         {/* Right Column - with full-height background */}
         <div className="relative min-w-0 max-w-full flex flex-col justify-end overflow-hidden px-auto md:pb-12">
@@ -106,7 +106,7 @@ export default function SceneLayer({
           />
           {/* Content with slide animation */}
           <div
-            className="relative flex flex-col justify-center py-12 lg:py-16 lg:pl-8 pointer-events-auto"
+            className="relative flex flex-col justify-center py-12 lg:py-16 md:pl-6 lg:pl-8 pointer-events-auto"
             style={{
               transform: `translateY(${rightY}px)`,
               transition: "transform 0.1s linear",

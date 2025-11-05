@@ -17,7 +17,9 @@ export default function SkillStrips({ skills }: Props) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full h-full overflow-x-auto scrollbar-hide">
+    <div
+      className="w-full overflow-x-auto scrollbar-hide min-h-[120px]"
+    >
       <div className="flex gap-1 min-w-max py-2">
         {skills.map((skill, index) => {
           const isHovered = hoveredIndex === index;

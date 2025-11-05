@@ -21,7 +21,7 @@ export default function About() {
       id: "roots",
       theme: { zh: "根", en: "Roots", pinyin: "gēn" },
       leftContent: (
-        <div className="flex flex-col md:flex-row md:items-center md:gap-8">
+        <div className="flex flex-col md:items-center md:gap-8">
           <div className="flex flex-col space-y-6 md:flex-1">
             <div className="flex flex-col">
               <h1 className="text-4xl text-gradient font-bold leading-none pb-8 md:text-5xl xl:text-6xl">
@@ -74,7 +74,7 @@ export default function About() {
       ),
       rightContent: (
         <div className="flex flex-col px-6 lg:px-8">
-          <div className="flex justify-end items-center mt-8">
+          <div className="flex justify-center sm:justify-end items-center my-8 lg:mb-0 lg:mt-8">
             <div className="max-w-[280px] md:max-w-[320px] w-full md:pr-10">
               <Image
                 className="w-full h-auto rounded-2xl shadow-custom-gradient-gold"
@@ -116,7 +116,7 @@ export default function About() {
       id: "craft",
       theme: { zh: "工", en: "Craft", pinyin: "gōng" },
       leftContent: (
-        <div className="flex flex-col justify-center space-y-4 h-full">
+        <div className="flex flex-col space-y-4">
           <div className="w-full max-w-full">
             <h2 className="text-2xl md:text-3xl text-gradient font-bold leading-none pb-2">
               Experience
@@ -125,7 +125,7 @@ export default function About() {
               <ExperienceIDE experiences={EXPERIENCES} />
             </div>
           </div>
-          <div className="h-full">
+          <div>
             {/* <h2 className="text-2xl md:text-3xl text-gradient font-bold leading-none pb-2">
               Skills
             </h2> */}

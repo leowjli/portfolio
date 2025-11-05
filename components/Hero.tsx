@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { getInitialLang, saveLang, updateURLLang, type Language } from "@/lib/language";
+import { MdLocationOn, MdAccessTime } from "react-icons/md";
 
 export default function Hero() {
   const [lang, setLang] = useState<Language>('en');
   const [mounted, setMounted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentTime, setCurrentTime] = useState("");
   const shouldReduceMotion = useReducedMotion();
 
   // Initialize language on mount
@@ -36,6 +38,21 @@ export default function Hero() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [shouldReduceMotion]);
+
+  // Update time every second
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      setCurrentTime(`${hours}:${minutes}:${seconds}`);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const switchLanguage = (newLang: Language) => {
     setLang(newLang);
@@ -149,7 +166,7 @@ export default function Hero() {
 
       {/* Language toggle */}
       <div
-        className="fixed top-24 right-6 sm:right-8 z-20 flex items-center gap-2 p-1 rounded-lg
+        className="absolute top-24 right-6 sm:right-8 z-20 flex items-center gap-2 p-1 rounded-lg
         bg-surface/80 dark:bg-surface/60 backdrop-blur-md border border-border/50 dark:border-border shadow-lg"
         role="group"
         aria-label="Language selector"
@@ -249,9 +266,21 @@ export default function Hero() {
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <p className="text-base font-medium md:text-lg xl:text-2xl text-secondary">
-                  Software developer 👨🏻‍💻 @ Tactical Affairs
-                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                  <p className="text-base font-medium md:text-lg xl:text-2xl text-secondary">
+                    Software developer 👨🏻‍💻 @ Tactical Affairs
+                  </p>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                      <MdLocationOn className="w-4 h-4 text-secondary" />
+                      <span className="text-xs sm:text-sm text-secondary">Seattle, WA</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                      <MdAccessTime className="w-4 h-4 text-secondary" />
+                      <span className="text-xs sm:text-sm text-secondary">{currentTime}</span>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           ) : (
@@ -278,13 +307,25 @@ export default function Hero() {
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <p
-                  lang="zh"
-                  className="text-base font-medium md:text-lg xl:text-2xl text-secondary font-[family-name:var(--font-noto-sans-sc)]"
-                  style={{ letterSpacing: "0.02em" }}
-                >
-                  软件工程师 👨🏻‍💻 @ Tactical Affairs
-                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                  <p
+                    lang="zh"
+                    className="text-base font-medium md:text-lg xl:text-2xl text-secondary font-[family-name:var(--font-noto-sans-sc)]"
+                    style={{ letterSpacing: "0.02em" }}
+                  >
+                    软件工程师 👨🏻‍💻 @ Tactical Affairs
+                  </p>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                      <MdLocationOn className="w-4 h-4 text-secondary" />
+                      <span lang="zh" className="text-xs sm:text-sm text-secondary font-[family-name:var(--font-noto-sans-sc)]">西雅图</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                      <MdAccessTime className="w-4 h-4 text-secondary" />
+                      <span className="text-xs sm:text-sm text-secondary">{currentTime}</span>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           )}

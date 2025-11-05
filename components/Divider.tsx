@@ -22,7 +22,7 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
   const themeProgress = (scrollProgress % progressPerTheme) / progressPerTheme;
 
   return (
-    <div className="hidden lg:block absolute inset-0 pointer-events-none z-10">
+    <div className="hidden md:block absolute inset-0 pointer-events-none z-10">
       {/* Continuous S-curve spanning full height */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
         <div className="relative w-20 xl:w-28 h-full">

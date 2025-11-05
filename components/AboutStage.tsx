@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import PersistentDivider from "./Divider";
+import Divider from "./Divider";
 import SceneLayer from "./SceneLayer";
 import { Scene } from "@/types/about";
 import { STAGE_HEIGHT_VH } from "@/constants/about";
@@ -52,7 +52,7 @@ export default function AboutStage({ scenes }: Props) {
         style={{ height: `${STAGE_HEIGHT_VH}vh` }}
       >
         <div className="sticky top-0 h-screen overflow-hidden">
-          <PersistentDivider
+          <Divider
             themes={themes}
             scrollProgress={scrollProgress}
             sceneWindows={sceneWindows}
@@ -74,12 +74,7 @@ export default function AboutStage({ scenes }: Props) {
       {/* Mobile */}
       <div className="mt-20 md:mt-0 md:hidden">
         {scenes.map((scene) => (
-          <section key={scene.id} className="relative py-12">
-            {/* Left content */}
-            <div className="px-6 mb-8">
-              {scene.leftContent}
-            </div>
-
+          <section key={scene.id} className="relative pb-12">
             {/* Theme label */}
             <div className="flex items-center justify-between py-6 px-6 border-y border-border/30 mb-8">
               <div className="flex flex-col items-center">
@@ -95,8 +90,13 @@ export default function AboutStage({ scenes }: Props) {
               </span>
             </div>
 
+            {/* Left content */}
+            <div className="px-6 mb-8">
+              {scene.leftContent}
+            </div>
+
             {/* Right content with paper background */}
-            <div className="relative py-8 mx-6 rounded-2xl bg-warm-accent">
+            <div className="relative py-8 mx-6 rounded-lg bg-warm-accent">
               <div
                 className="absolute inset-0 rounded-2xl"
                 style={{
