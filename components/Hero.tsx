@@ -242,8 +242,7 @@ export default function Hero() {
               <motion.div variants={itemVariants}>
                 <h1
                   className={`text-5xl font-bold leading-none pb-3 sm:text-6xl md:text-8xl xl:text-[150px]
-                  text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-50%
-                  ${!shouldReduceMotion ? "animate-shimmer" : ""}`}
+                  text-gradient ${!shouldReduceMotion ? "animate-shimmer" : ""}`}
                 >
                   What&apos;s up! I&apos;m Leo.
                 </h1>
@@ -270,8 +269,7 @@ export default function Hero() {
                 <h1
                   lang="zh"
                   className={`text-5xl font-bold leading-none pb-5 sm:text-6xl md:text-8xl xl:text-9xl
-                  text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-50%
-                  font-[family-name:var(--font-noto-sans-sc)]
+                  text-gradient font-[family-name:var(--font-noto-sans-sc)]
                   ${!shouldReduceMotion ? "animate-shimmer" : ""}`}
                   style={{ letterSpacing: "0.02em", filter: "url(#paper-texture)" }}
                 >

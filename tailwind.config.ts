@@ -21,6 +21,9 @@ export default {
         surface: "var(--surface)",
         subtle: "var(--subtle)",
         chip: "var(--chip)",
+        vermilion: "var(--vermilion)",
+        "warm-accent": "var(--warm-accent)",
+        "warm-border": "var(--warm-border)",
       },
       animation: {
         mouse: 'mouse 2s infinite',
@@ -39,6 +42,7 @@ export default {
       },
       boxShadow: {
         'custom-gradient': '5px 5px rgba(57, 142, 235, 0.5), 10px 10px rgba(57, 142, 235, 0.3), 15px 15px rgba(57, 142, 235, 0.2), 20px 20px rgba(57, 142, 235, 0.1), 25px 25px rgba(57, 142, 235, 0.05)',
+        'custom-gradient-gold': 'rgb(234, 179, 8) 0px 20px 30px -10px',
         'glow': '0 0 20px rgba(57, 142, 235, 0.4), 0 0 40px rgba(57, 142, 235, 0.3), 0 4px 60px rgba(57, 142, 235, 0.2)',
         'glow-lg': '0 0 30px rgba(57, 142, 235, 0.6), 0 0 60px rgba(57, 142, 235, 0.4), 0 8px 80px rgba(57, 142, 235, 0.3)',
         'glow-neon': '0 0 5px rgba(57, 142, 235, 0.5), 0 0 20px rgba(57, 142, 235, 0.5), 0 0 40px rgba(57, 142, 235, 0.4), 0 0 80px rgba(57, 142, 235, 0.3)',

@@ -170,29 +170,24 @@ export default function ExperienceIDE({ experiences }: Props) {
   const copy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(code);
-    } catch {
-      // Fallback
-      const ta = document.createElement("textarea");
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
+    } catch (err) {
+      console.error("Failed to copy to clipboard:", err);
+      alert("Failed to copy to clipboard. Please try again.");
     }
   }, [code]);
 
   return (
     <div className={`rounded-xl border shadow-md bg-[var(--editor-bg)] border-[var(--panel-border)] overflow-hidden ${jetbrainsMono.variable}`}>
       {/* Title bar */}
-      <div className="relative flex items-center justify-between h-10 px-3 border-b border-[var(--panel-border)] bg-gradient-to-b from-[#10131a] to-[#0d1017]">
+      <div className="relative flex items-center justify-between h-8 px-2 border-b border-[var(--panel-border)] bg-gradient-to-b from-[#10131a] to-[#0d1017]">
         <div className="flex items-center gap-2">
           <span className="inline-flex gap-1">
-            <span aria-hidden className="h-3 w-3 rounded-full bg-[#ff5f56]" />
-            <span aria-hidden className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
-            <span aria-hidden className="h-3 w-3 rounded-full bg-[#27c93f]" />
+            <span aria-hidden className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
+            <span aria-hidden className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+            <span aria-hidden className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
           </span>
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2 text-xs sm:text-sm text-[var(--text-default)]/80 font-medium tabular-nums pointer-events-none select-none">
+        <div className="absolute left-1/2 -translate-x-1/2 text-[10px] sm:text-xs text-[var(--text-default)]/80 font-medium tabular-nums pointer-events-none select-none">
           {active?.filename}
         </div>
         <div className="flex items-center">
@@ -200,9 +195,9 @@ export default function ExperienceIDE({ experiences }: Props) {
             type="button"
             aria-label="Copy code"
             onClick={copy}
-            className="group px-2 py-1 rounded-md text-[var(--text-default)]/70 hover:text-[var(--text-default)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-[#5b9cff] focus-visible:ring-offset-[var(--editor-bg)]"
+            className="group px-1.5 py-0.5 rounded-md text-[var(--text-default)]/70 hover:text-[var(--text-default)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-[#5b9cff] focus-visible:ring-offset-[var(--editor-bg)]"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="opacity-80 group-hover:opacity-100">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-80 group-hover:opacity-100">
               <path d="M9 9h9v12H9z" stroke="currentColor" strokeWidth="1.5" />
               <path d="M6 3h9v3M6 3v12h3" stroke="currentColor" strokeWidth="1.5" />
             </svg>
@@ -241,21 +236,21 @@ export default function ExperienceIDE({ experiences }: Props) {
             copy();
           }
         }}
-        className={`editor font-[var(--font-editor),ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-[12px] sm:text-[13px] md:text-[14px] leading-6 text-[var(--text-default)]`}
+        className={`editor font-[var(--font-editor),ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-[11px] sm:text-[12px] leading-5 text-[var(--text-default)]`}
       >
         <div className="relative overflow-x-auto">
           <div className={`grid grid-cols-[auto_1fr] min-w-full transition-all duration-150 ease-out ${prefersReduced.current ? "" : "transform-gpu"} ${animClass}`}>
             {/* Gutter */}
-            <div className="gutter select-none text-right pr-3 py-2 sm:py-3">
+            <div className="gutter select-none text-right pr-2 py-1.5 sm:py-2">
               {lines.map((_, idx) => (
-                <div key={idx} className="tabular-nums text-[10px] sm:text-[12px] text-[var(--comment)]">
+                <div key={idx} className="tabular-nums text-[9px] sm:text-[11px] text-[var(--comment)]">
                   {idx + 1}
                 </div>
               ))}
             </div>
 
             {/* Code */}
-            <div className="py-2 sm:py-3 pr-3 sm:pr-4 min-w-0">
+            <div className="py-1.5 sm:py-2 pr-2 sm:pr-3 min-w-0">
               {lines.map((line, idx) => (
                 <div key={idx} className="whitespace-pre">
                   {tokenize(line).map((t, i) => {

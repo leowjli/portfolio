@@ -20,13 +20,13 @@ export default function Contact() {
                     transition={{ duration: 0.5, ease: easeIn }}
                 >
                     <div className="flex flex-col justify-center items-start">
-                        <h1 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-70% font-bold leading-none md:text-4xl">Got a cool build idea?</h1>
-                        <h1 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-70% font-bold md:pl-10 leading-none md:text-4xl">want to hire me?</h1>
-                        <h1 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-70% font-bold leading-none md:text-4xl">want to make content?</h1>
-                        <h1 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-30% to-[#398EEB] to-70% font-bold md:pl-10 leading-none pb-3 md:text-4xl">say hi!</h1>
+                        <h1 className="text-2xl text-gradient font-bold leading-none md:text-4xl">Got a cool build idea?</h1>
+                        <h1 className="text-2xl text-gradient font-bold md:pl-10 leading-none md:text-4xl">want to hire me?</h1>
+                        <h1 className="text-2xl text-gradient font-bold leading-none md:text-4xl">want to make content?</h1>
+                        <h1 className="text-2xl text-gradient font-bold md:pl-10 leading-none pb-3 md:text-4xl">say hi!</h1>
                     </div>
                     <p className="flex lg:text-xl font-semibold text-start text-foreground">Let&apos;s chat — I&apos;d love to hear from you!</p>
-                    <div className="flex flex-row justify-center gap-3 sm:gap-8 lg:flex-col lg:justify-normal lg:gap-0 my-10">
+                    <div className="flex flex-row justify-start md:justify-center gap-3 sm:gap-8 lg:flex-col lg:justify-normal lg:gap-0 my-10">
                         {socials.map((social, id) => {
                             return (
                                 <Link href={social.url} rel="noopener noreferrer" key={id}>

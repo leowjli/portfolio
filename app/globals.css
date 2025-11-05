@@ -30,6 +30,17 @@
     --subtle: #6b7280;
     --chip: #1f2937;
   }
+
+  :root {
+    --vermilion: #E34234;
+    --warm-accent: #FFF5F3;
+    --warm-border: #FFE4E1;
+  }
+
+  .dark {
+    --warm-accent: #2a1614;
+    --warm-border: #3d2420;
+  }
 }
 
 @layer utilities {
@@ -44,6 +55,22 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #F03E41 5%, #951DC6 10%, #398EEB 30%);
   }
 
   @keyframes scroll {
@@ -75,7 +102,6 @@
     animation: shimmer 8s ease-in-out infinite;
   }
 
-  /* Mouse scroll indicator animation */
   @keyframes mouse {
     0% {
       opacity: 0;
@@ -91,7 +117,6 @@
     animation: mouse 2s linear infinite;
   }
 
-  /* Ambient blob motion - organic wandering paths (inner element animation) */
   @keyframes blob-wander-a {
     0%   { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
     12%  { transform: translate(8vw, -6vh)    scale(1.06); opacity: 0.55; }
@@ -104,12 +129,6 @@
     100% { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
   }
 
-  .animate-blob-wander-a {
-    animation: blob-wander-a 28s ease-in-out infinite;
-    will-change: transform;
-  }
-
-  /* Alternate wandering paths */
   @keyframes blob-wander-b {
     0%   { transform: translate(0, 0)        scale(1);   opacity: 0.45; }
     10%  { transform: translate(-6vw, -4vh)   scale(1.03); opacity: 0.5; }
@@ -134,6 +153,11 @@
     100% { transform: translate(0, 0)        scale(1);   opacity: 0.5; }
   }
 
+  .animate-blob-wander-a {
+    animation: blob-wander-a 28s ease-in-out infinite;
+    will-change: transform;
+  }
+
   .animate-blob-wander-b {
     animation: blob-wander-b 32s ease-in-out infinite;
     will-change: transform;
@@ -142,6 +166,43 @@
   .animate-blob-wander-c {
     animation: blob-wander-c 36s ease-in-out infinite;
     will-change: transform;
+  }
+
+  /* Paper texture overlay for Chinese sections */
+  .paper-texture {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.015) 2px,
+        rgba(0, 0, 0, 0.015) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.015) 2px,
+        rgba(0, 0, 0, 0.015) 4px
+      );
+  }
+
+  .dark .paper-texture {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 2px,
+        rgba(255, 255, 255, 0.02) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 2px,
+        rgba(255, 255, 255, 0.02) 4px
+      );
   }
 }
 
