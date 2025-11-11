@@ -10,7 +10,6 @@ import Gallery from "@/components/Gallery";
 import NowPlaying from "@/components/NowPlaying";
 import { gallery, skills, EXPERIENCES } from "@/constants";
 import { Scene } from "@/types/about";
-import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function About() {
@@ -32,7 +31,7 @@ export default function About() {
                 <strong>
                   <a
                     href="https://tacticalaffairs.com/"
-                    className="hover:underline inline-flex items-center text-foreground dark:text-accent"
+                    className="underline inline-flex items-center text-foreground"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -47,11 +46,11 @@ export default function About() {
                 <strong>
                   <a
                     href="https://www.washington.edu/"
-                    className="hover:underline text-[#4B2E83] dark:text-purple-400"
+                    className="underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    University of Washington
+                    Univ. of Washington
                   </a>
                   <span className="text-[#4B2E83] dark:text-purple-400 font-bold">
                     {" "}
@@ -65,7 +64,7 @@ export default function About() {
               <p className="lg:text-lg max-w-[600px] text-foreground">
                 I value authenticity and passion, and I&apos;m always looking
                 for ways to improve and grow, learning to ask the right
-                questions and always tinkering with my &quot;why&quot;
+                questions and always tinkering with my &quot;why&quot;.
               </p>
             </div>
             <NowPlaying />
@@ -73,36 +72,33 @@ export default function About() {
         </div>
       ),
       rightContent: (
-        <div className="flex flex-col px-6 lg:px-8">
-          <div className="flex justify-center sm:justify-end items-center my-8 lg:mb-0 lg:mt-8">
-            <div className="max-w-[280px] md:max-w-[320px] w-full md:pr-10">
-              <Image
-                className="w-full h-auto rounded-2xl shadow-custom-gradient-gold"
-                src="/headshot.jpg"
-                alt="profile picture"
-                width={600}
-                height={850}
-                priority
-              />
-            </div>
-          </div>
+        <div className="flex flex-col items-end px-6 md:px-0 lg:px-8">
           <p
-            className="text-lg lg:text-xl text-vermilion font-medium"
+            className="text-lg lg:text-3xl text-primary font-medium pb-4 font-ma-shan-zheng"
             lang="zh"
           >
             根深蒂固，方能枝繁叶茂。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             我管加拿大，北京，和西雅图叫家。
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             家的文化的融合塑造了我看待世界的方式，
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             也让我热爱技术与人文的交汇。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
-            我重视真实与热情，并始终寻求提升与成长，
-            <br />
-            不断学习如何提出正确的问题，并时刻打磨属于自己的“初心”
+            我重视真实与热情，
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
+            并始终寻求提升与成长，
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
+            不断学习如何提出正确的问题，
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
+            并时刻打磨属于自己的“初心”。
           </p>
           {/* <p className="text-sm text-foreground/60 italic" lang="zh">
             放空 - 蔡健雅
@@ -118,7 +114,7 @@ export default function About() {
       leftContent: (
         <div className="flex flex-col space-y-4">
           <div className="w-full max-w-full">
-            <h2 className="text-2xl md:text-3xl text-gradient font-bold leading-none pb-2">
+            <h2 className="text-3xl md:text-4xl text-gradient font-bold leading-none pb-2">
               Experience
             </h2>
             <div className="w-full max-w-full overflow-x-auto">
@@ -134,21 +130,23 @@ export default function About() {
         </div>
       ),
       rightContent: (
-        <div className="flex flex-col space-y-6 px-6 lg:px-8">
+        <div className="flex flex-col items-end px-6 md:px-0 lg:px-8">
           <p
-            className="text-lg lg:text-xl text-vermilion font-medium"
+            className="text-lg lg:text-3xl text-primary font-medium pb-4 font-ma-shan-zheng"
             lang="zh"
           >
             工，不只是手艺，而是心意。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             代码如诗，每一行都是思考的结晶。
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             我相信优雅的解决方案源于对问题本质的理解。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             技术是工具，而工匠精神是灵魂。
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             每一个项目，我都追求将功能与美学完美结合。
           </p>
         </div>
@@ -167,9 +165,9 @@ export default function About() {
           <p className="lg:text-lg text-foreground">
             I&apos;m a people-person, and I focus on connections through playing
             basketball, tossing a frisbee, or eating delicious food. On my own,
-            I like to hit the gym, doodle goofy ideas, vibe to music (my
-            airpods are in almost all the time), explore nature, play drums, and
-            meet new people!
+            I like to hit the gym, doodle goofy ideas, vibe to music (my airpods
+            are in almost all the time), explore nature, play drums, and meet
+            new people!
           </p>
           <p className="lg:text-lg text-foreground">
             I&apos;ve also had the pleasure of playing cymbals with the{" "}
@@ -200,21 +198,23 @@ export default function About() {
         </div>
       ),
       rightContent: (
-        <div className="flex flex-col space-y-6 px-6 lg:px-8">
+        <div className="flex flex-col items-end px-6 md:px-0 lg:px-8">
           <p
-            className="text-lg lg:text-xl text-vermilion font-medium"
+            className="text-lg lg:text-3xl text-primary font-medium pb-4 font-ma-shan-zheng"
             lang="zh"
           >
             衡，是生活与工作的平衡。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             音乐让我专注，运动让我平静，朋友让我快乐。
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             技术是我的事业，但生活的丰富才是我的能量来源。
           </p>
           <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             在代码与人和人的经历之间，在逻辑与创意之间，
-            <br />
+          </p>
+          <p className="text-base lg:text-lg text-foreground/80" lang="zh">
             我在探索属于自己的平衡点。
           </p>
         </div>

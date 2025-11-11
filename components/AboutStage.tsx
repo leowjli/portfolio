@@ -96,11 +96,11 @@ export default function AboutStage({ scenes }: Props) {
             </div>
 
             {/* Right content with paper background */}
-            <div className="relative py-8 mx-6 rounded-lg bg-warm-accent">
+            <div className="relative py-8 mx-6 rounded-lg bg-accent2">
               <div
                 className="absolute inset-0 rounded-2xl"
                 style={{
-                  backgroundColor: "black",
+                  backgroundColor: "white",
                   opacity: 0.08,
                 }}
               />

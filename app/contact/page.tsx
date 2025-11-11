@@ -19,13 +19,13 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: easeIn }}
                 >
-                    <div className="flex flex-col justify-center items-start md:items-center">
+                    <div className="flex flex-col justify-center items-start md:items-center lg:items-start">
                         <h1 className="text-2xl text-gradient font-bold leading-none md:text-4xl">Got a cool build idea?</h1>
                         <h1 className="text-2xl text-gradient font-bold md:pl-10 leading-none md:text-4xl">want to hire me?</h1>
                         <h1 className="text-2xl text-gradient font-bold leading-none md:text-4xl">want to make content?</h1>
                         <h1 className="text-2xl text-gradient font-bold md:pl-10 leading-none pb-3 md:text-4xl">say hi!</h1>
                     </div>
-                    <p className="flex lg:text-xl font-semibold text-start md:justify-center text-foreground">Let&apos;s chat — I&apos;d love to hear from you!</p>
+                    <p className="flex lg:text-xl font-semibold text-start md:justify-center lg:justify-start text-foreground">Let&apos;s chat — I&apos;d love to hear from you!</p>
                     <div className="flex flex-row justify-start md:justify-center gap-3 sm:gap-8 lg:flex-col lg:justify-normal lg:gap-0 my-10">
                         {socials.map((social, id) => {
                             return (

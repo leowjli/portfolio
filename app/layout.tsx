@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Noto_Sans_SC } from "next/font/google";
+import { Noto_Sans_SC, Ma_Shan_Zheng } from "next/font/google";
 import "./globals.css";
 import Transition from "@/components/Transitions";
 import { ThemeProvider } from "@/contexts/ThemeContext";
@@ -19,6 +19,12 @@ const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
   variable: "--font-noto-sans-sc",
+  display: "swap",
+});
+const maShanZheng = Ma_Shan_Zheng({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-ma-shan-zheng",
   display: "swap",
 });
 
@@ -46,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSansSC.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSansSC.variable} ${maShanZheng.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>
           <Transition>

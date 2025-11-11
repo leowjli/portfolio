@@ -34,15 +34,10 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
-              {/* Gradient for left edge fade */}
-              <linearGradient id="fade-left" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="30%" stopColor="white" stopOpacity="1" />
-              </linearGradient>
-
               {/* Masks for full height with gradient fade on left */}
               {themes.map((_, index) => (
                 <mask key={`glyph-mask-${index}`} id={`glyph-mask-${index}`}>
-                  <rect x="0" y="0" width="100" height="800" fill="url(#fade-left)" />
+                  <rect x="0" y="0" width="100" height="800" fill="white" />
                 </mask>
               ))}
             </defs>
@@ -60,12 +55,12 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
                   {/* Curved fill following S-curve - full height */}
                   <path
                     d="M 50 0 Q -40 200 50 400 Q 140 600 50 800 L 100 800 L 100 0 Z"
-                    fill="var(--warm-accent)"
+                    fill="var(--accent2)"
                   />
                   {/* Paper texture overlay */}
                   <path
                     d="M 50 0 Q -40 200 50 400 Q 140 600 50 800 L 100 800 L 100 0 Z"
-                    fill="black"
+                    fill="white"
                     opacity="0.08"
                   />
                 </g>

@@ -9,6 +9,7 @@
     --primary: #000000;
     --secondary: #6b7280;
     --accent: #398eeb;
+    --accent2: #81ddf86c; /* #7fb1e5 */
     --muted: #f3f4f6;
     --border: #e5e7eb;
     --card: #ffffff;
@@ -23,6 +24,7 @@
     --primary: #ffffff;
     --secondary: #9ca3af;
     --accent: #5b9cff;
+    --accent2: #02366e;
     --muted: #1f2937;
     --border: #374151;
     --card: #111111;
@@ -85,6 +87,85 @@
 
   .animate-scroll {
     animation: scroll 50s linear infinite;
+  }
+
+  /* Button hover effect with gradient fill */
+  .btn-gradient-hover {
+    position: relative;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: color 0.3s cubic-bezier(0.694, 0, 0.335, 1);
+  }
+
+  /* Border using gradient */
+  .btn-gradient-hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(to right, #F03E41 5%, #951DC6 35%, #398EEB 80%);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  /* Fill on hover */
+  .btn-gradient-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    border-radius: inherit;
+    background: linear-gradient(to right, #F03E41 5%, #951DC6 35%, #398EEB 80%);
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .btn-gradient-hover:hover::before {
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+
+  .btn-gradient-hover span,
+  .btn-gradient-hover > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Button hover effect for border buttons (solid color) */
+  .btn-border-hover {
+    position: relative;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: currentColor;
+    transition: color 0.3s cubic-bezier(0.694, 0, 0.335, 1);
+  }
+
+  .btn-border-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-color: currentColor;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .btn-border-hover:hover::before {
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+
+  .btn-border-hover span,
+  .btn-border-hover > * {
+    position: relative;
+    z-index: 1;
   }
 
   /* Hero shimmer animation for gradient text */

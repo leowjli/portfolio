@@ -93,20 +93,20 @@ export default function SceneLayer({
         <div className="hidden md:block relative w-12 lg:w-20 xl:w-28" aria-hidden="true" />
 
         {/* Right Column - with full-height background */}
-        <div className="relative min-w-0 max-w-full flex flex-col justify-end overflow-hidden px-auto md:pb-12">
+        <div className="relative flex flex-col justify-end overflow-hidden md:pb-12">
           {/* Full-height paper background layer */}
-          <div className="absolute inset-0 bg-warm-accent" />
+          <div className="absolute inset-0 bg-accent2" />
           {/* Paper texture overlay - match center column style */}
           <div
             className="absolute inset-0"
             style={{
-              backgroundColor: "black",
+              backgroundColor: "white",
               opacity: 0.08,
             }}
           />
           {/* Content with slide animation */}
           <div
-            className="relative flex flex-col justify-center py-12 lg:py-16 md:pl-6 lg:pl-8 pointer-events-auto"
+            className="relative flex flex-col py-12 lg:py-16 pointer-events-auto w-fit ml-auto"
             style={{
               transform: `translateY(${rightY}px)`,
               transition: "transform 0.1s linear",

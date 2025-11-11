@@ -34,7 +34,7 @@ export default function SkillStrips({ skills }: Props) {
               {/* Strip container */}
               <div
                 className={`
-                  relative h-20 rounded-md transition-all duration-300 ease-out overflow-visible
+                  relative h-16 rounded-md transition-all duration-300 ease-out overflow-visible
                   ${
                     isHovered
                       ? "w-24 bg-accent/10"
@@ -50,7 +50,7 @@ export default function SkillStrips({ skills }: Props) {
                   `}
                 >
                   <span
-                    className="text-xs sm:text-sm font-medium text-foreground/70 select-none"
+                    className="text-xs font-medium text-foreground/70 select-none"
                     style={{
                       writingMode: "vertical-rl",
                       textOrientation: "mixed",

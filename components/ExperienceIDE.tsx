@@ -16,11 +16,21 @@ type Props = {
 
 function buildCode(exp: Experience): string {
   const stackList = exp.stack?.join(", ") ?? "";
-  const bulletLines = exp.bullets; // allow any count, including blanks
+  
+  // Remove trailing empty/whitespace-only strings from bullets
+  const bulletLines = [...exp.bullets];
+  while (bulletLines.length > 0) {
+    const last = bulletLines[bulletLines.length - 1];
+    if (last.trim() === "" || last.trim() === "---") {
+      bulletLines.pop();
+    } else {
+      break;
+    }
+  }
+  
   const lines: string[] = [];
   lines.push(`import { ${stackList} }  # key tech`);
   lines.push(`from datetime import date`);
-  lines.push("");
   lines.push(`class Experience:`);
   lines.push(`    company = "${exp.company}"`);
   lines.push(`    role    = "${exp.role}"`);
@@ -31,19 +41,25 @@ function buildCode(exp: Experience): string {
   if (exp.url) {
     lines.push(`    link    = "${exp.url}"`);
   }
-  lines.push("");
   lines.push(`def impact():`);
   lines.push(`    bullets = [`);
   for (const b of bulletLines) {
     const trimmed = b.trim();
     if (trimmed === "" || trimmed === "---") {
-      lines.push(`        `); // intentional blank line within list block
+      lines.push(`        `);
     } else {
       lines.push(`        "${b.replace(/"/g, '\\"')}",`);
     }
   }
+  
   lines.push(`    ]`);
   lines.push(`    return bullets`);
+  
+  // Remove all trailing blank lines - this ensures no trailing newlines in final string
+  while (lines.length > 0 && lines[lines.length - 1].trim() === "") {
+    lines.pop();
+  }
+  
   return lines.join("\n");
 }
 
@@ -128,10 +144,6 @@ function useKeyboardTabs(ids: string[], activeId: string, setActiveId: (id: stri
         const next = e.key === "ArrowRight" ? (idx + 1) % ids.length : (idx - 1 + ids.length) % ids.length;
         setActiveId(ids[next]);
       }
-      // Copy: Cmd/Ctrl + C when editor focused
-      if ((e.metaKey || e.ctrlKey) && (e.key === "c" || e.key === "C")) {
-        // handled at editor level; do nothing here to avoid double copy
-      }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -152,7 +164,6 @@ export default function ExperienceIDE({ experiences }: Props) {
     prefersReduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }, []);
 
-  const editorRef = useRef<HTMLDivElement | null>(null);
   const mounted = useRef<boolean>(false);
   const [animClass, setAnimClass] = useState<string>("");
   useEffect(() => {
@@ -226,7 +237,6 @@ export default function ExperienceIDE({ experiences }: Props) {
 
       {/* Editor */}
       <div
-        ref={editorRef}
         role="region"
         aria-label="Code editor"
         tabIndex={0}

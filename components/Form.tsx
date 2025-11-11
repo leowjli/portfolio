@@ -191,7 +191,9 @@ export default function Form() {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
-          <button type="submit" className="py-2 px-5 text-center text-white font-medium bg-gradient-to-r from-[#F03E41] from-5% via-[#951DC6] via-35% to-[#398EEB] to-80% rounded-lg">Send Message</button>
+          <button type="submit" className="btn-gradient-hover py-2 px-5 text-center text-primary font-medium rounded-lg hover:text-background">
+            Send Message
+          </button>
           <div className="flex justify-center items-center py-5 lg:p-0">
             <Image
               src={"/donut.png"}
