@@ -188,7 +188,7 @@ export default function Hero() {
       {/* Main hero content */}
       <div className="absolute bottom-0 left-0 w-full pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-12 lg:px-16 xl:px-20">
         <div
-          className="relative w-full flex flex-col sm:flex-row-reverse justify-center items-center sm:items-end sm:justify-between z-0 mb-10 sm:mb-0 gap-6 sm:gap-8"
+          className="relative w-full flex flex-col sm:flex-row-reverse justify-center items-center sm:items-end sm:justify-between z-0 mb-10 pr-0 sm:pr-10 sm:mb-0 gap-6 sm:gap-8"
         >
           {/* Screen reader only announcements */}
           <div
@@ -205,7 +205,7 @@ export default function Hero() {
             variants={itemVariants}
             className="flex-shrink-0"
           >
-            <div className="w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px] mx-auto sm:mx-0">
+            <div className="w-[230px] md:w-[240px] lg:w-[280px] xl:w-[320px] mx-auto sm:mx-0">
               <Image
                 className="w-full h-auto rounded-2xl shadow-custom-gradient"
                 src="/headshot.jpg"
@@ -227,7 +227,7 @@ export default function Hero() {
                 animate="animate"
                 exit="exit"
                 transition={swapTransition}
-                className="flex flex-col items-center sm:items-start"
+                className="flex flex-col items-center sm:items-start justify-center sm:justify-start"
               >
                 {/* English greeting */}
                 <motion.div variants={itemVariants}>
@@ -241,10 +241,10 @@ export default function Hero() {
 
                 <motion.div variants={itemVariants}>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                    <p className="text-base font-medium md:text-lg xl:text-2xl text-secondary">
+                    <p className="text-sm font-medium md:text-lg xl:text-2xl text-secondary">
                       Software developer 👨🏻‍💻 @ Tactical Affairs
                     </p>
-                    <div className="flex items-center gap-2 flex-wrap">
+                    <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
                       <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
                         <MdLocationOn className="w-4 h-4 text-secondary" />
                         <span className="text-xs sm:text-sm text-secondary">
@@ -269,7 +269,7 @@ export default function Hero() {
                 animate="animate"
                 exit="exit"
                 transition={swapTransition}
-                className="flex flex-col sm:flex-row items-center sm:items-start"
+                className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start"
               >
                 {/* Pinyin rail - (desktop only) */}
                 <aside
@@ -307,13 +307,13 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                       <p
                         lang="zh"
-                        className="text-base font-medium md:text-lg xl:text-2xl text-secondary font-[family-name:var(--font-noto-sans-sc)]"
+                        className="text-sm font-medium md:text-lg xl:text-2xl text-secondary font-[family-name:var(--font-noto-sans-sc)]"
                         style={{ letterSpacing: "0.02em" }}
                       >
                         软件工程师 👨🏻‍💻 @ Tactical Affairs
                       </p>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                      <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-transparent backdrop-blur-sm border border-border/30">
                           <MdLocationOn className="w-4 h-4 text-secondary" />
                           <span
                             lang="zh"
@@ -322,7 +322,7 @@ export default function Hero() {
                             西雅图
                           </span>
                         </div>
-                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
+                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-transparent backdrop-blur-sm border border-border/30">
                           <MdAccessTime className="w-4 h-4 text-secondary" />
                           <span className="text-xs sm:text-sm text-secondary">
                             {currentTime}
