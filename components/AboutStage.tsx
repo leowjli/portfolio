@@ -96,9 +96,33 @@ export default function AboutStage({ scenes }: Props) {
             </div>
 
             {/* Right content with paper background */}
-            <div className="relative py-8 mx-6 rounded-lg bg-accent2">
+            <div className="relative py-8 mx-6 rounded-lg overflow-hidden">
+              {/* Blob background for Chinese section */}
+              <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none rounded-lg">
+                <div
+                  className="absolute top-8 right-4 w-64 h-64"
+                  aria-hidden="true"
+                >
+                  <div className="w-full h-full rounded-full blur-[60px] bg-red-500/50 dark:bg-red-500/60 animate-blob-wander-a" />
+                </div>
+                <div
+                  className="absolute bottom-8 left-4 w-72 h-72"
+                  aria-hidden="true"
+                >
+                  <div className="w-full h-full rounded-full blur-[60px] bg-blue-500/50 dark:bg-blue-500/60 animate-blob-wander-b" />
+                </div>
+                <div
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="w-full h-full rounded-full blur-[70px] bg-purple-500/40 dark:bg-purple-500/50 animate-blob-wander-c"
+                    style={{ animationDelay: "5s" }}
+                  />
+                </div>
+              </div>
               <div
-                className="absolute inset-0 rounded-2xl"
+                className="absolute inset-0 rounded-2xl z-[2]"
                 style={{
                   backgroundColor: "white",
                   opacity: 0.08,

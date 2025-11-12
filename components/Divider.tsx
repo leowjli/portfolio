@@ -22,7 +22,35 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
   const themeProgress = (scrollProgress % progressPerTheme) / progressPerTheme;
 
   return (
-    <div className="hidden md:block absolute inset-0 pointer-events-none z-10">
+    <>
+      {/* Blocking layer for left side - hides blob overflow */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none z-[9]">
+        <div className="sticky top-0 h-screen w-full">
+          {/* Full left side blocking */}
+          <div className="absolute inset-y-0 left-0 right-1/2 mr-10 xl:mr-14 bg-background" />
+
+          {/* Curve transition area */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-20 xl:w-28 h-full">
+              <svg
+                className="absolute inset-0 w-full h-full"
+                viewBox="0 0 100 800"
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Left side of curve fill */}
+                <path
+                  d="M 0 0 L 50 0 Q -40 200 50 400 Q 140 600 50 800 L 0 800 Z"
+                  className="fill-background"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main divider with curve and labels */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none z-10">
       {/* Continuous S-curve spanning full height */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
         <div className="relative w-20 xl:w-28 h-full">
@@ -55,7 +83,7 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
                   {/* Curved fill following S-curve - full height */}
                   <path
                     d="M 50 0 Q -40 200 50 400 Q 140 600 50 800 L 100 800 L 100 0 Z"
-                    fill="var(--accent2)"
+                    fill="transparent"
                   />
                   {/* Paper texture overlay */}
                   <path
@@ -145,6 +173,7 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
           })}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

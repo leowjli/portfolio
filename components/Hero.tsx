@@ -142,7 +142,7 @@ export default function Hero() {
               values="0 0 0 0 0
                       0 0 0 0 0
                       0 0 0 0 0
-                      0 0 0 0.12 0"
+                      0 0 0 0.25 0"
               result="texture"
             />
             <feComposite in="SourceGraphic" in2="texture" operator="over" />

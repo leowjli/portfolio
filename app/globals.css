@@ -9,7 +9,6 @@
     --primary: #000000;
     --secondary: #6b7280;
     --accent: #398eeb;
-    --accent2: #81ddf86c; /* #7fb1e5 */
     --muted: #f3f4f6;
     --border: #e5e7eb;
     --card: #ffffff;
@@ -24,7 +23,7 @@
     --primary: #ffffff;
     --secondary: #9ca3af;
     --accent: #5b9cff;
-    --accent2: #02366e;
+    /* --accent2: #02366e; */
     --muted: #1f2937;
     --border: #374151;
     --card: #111111;
