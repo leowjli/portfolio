@@ -27,11 +27,11 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
       <div className="hidden md:block absolute inset-0 pointer-events-none z-[9]">
         <div className="sticky top-0 h-screen w-full">
           {/* Full left side blocking */}
-          <div className="absolute inset-y-0 left-0 right-1/2 mr-10 xl:mr-14 bg-background" />
+          <div className="absolute inset-y-0 left-0 right-1/2 mr-6 lg:mr-10 xl:mr-14 bg-background" />
 
           {/* Curve transition area */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-20 xl:w-28 h-full">
+            <div className="relative w-12 lg:w-20 xl:w-28 h-full">
               <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 100 800"
@@ -53,7 +53,7 @@ export default function Divider({ themes, scrollProgress, sceneWindows }: Props)
       <div className="hidden md:block absolute inset-0 pointer-events-none z-10">
       {/* Continuous S-curve spanning full height */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
-        <div className="relative w-20 xl:w-28 h-full">
+        <div className="relative w-12 lg:w-20 xl:w-28 h-full">
           {/* SVG with curved inlay fill + stroke */}
           <svg
             className="absolute inset-0 w-full h-full"

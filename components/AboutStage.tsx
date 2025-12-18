@@ -122,7 +122,7 @@ export default function AboutStage({ scenes }: Props) {
                 </div>
               </div>
               <div
-                className="absolute inset-0 rounded-2xl z-[2]"
+                className="absolute inset-0 z-[2] pointer-events-none"
                 style={{
                   backgroundColor: "white",
                   opacity: 0.08,
