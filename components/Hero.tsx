@@ -10,6 +10,7 @@ import {
 } from "@/lib/language";
 import { MdLocationOn, MdAccessTime } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const [lang, setLang] = useState<Language>("en");
@@ -242,7 +243,7 @@ export default function Hero() {
                 <motion.div variants={itemVariants}>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                     <p className="text-sm font-medium md:text-lg xl:text-2xl text-secondary">
-                      Software developer 👨🏻‍💻 @ Tactical Affairs
+                      Software Engineer 👨🏻‍💻 @ <Link href="https://www.t-mobile.com/" target="_blank" rel="noopener noreferrer">T-Mobile</Link>
                     </p>
                     <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
                       <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-muted/50 backdrop-blur-sm border border-border/30">
@@ -310,7 +311,7 @@ export default function Hero() {
                         className="text-sm font-medium md:text-lg xl:text-2xl text-secondary font-[family-name:var(--font-noto-sans-sc)]"
                         style={{ letterSpacing: "0.02em" }}
                       >
-                        软件工程师 👨🏻‍💻 @ Tactical Affairs
+                        软件工程师 👨🏻‍💻 @ <Link href="https://www.t-mobile.com/" target="_blank" rel="noopener noreferrer">T-Mobile</Link>
                       </p>
                       <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
                         <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-transparent backdrop-blur-sm border border-border/30">
