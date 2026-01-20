@@ -279,16 +279,13 @@ export const skills = [
 
 export const gallery = [
   "/gallery/band-roses.JPG",
+  "/gallery/blur_smile.jpg",
   "/gallery/fam-tree-atd.jpg",
-  "/gallery/frisbae.JPG",
-  "/gallery/action-shot.jpg",
-  "/gallery/cymbal-section.JPG",
-  "/gallery/snare-gp.jpg",
-  "/gallery/fam-tree-csa.JPG",
-  "/gallery/rooftop-w-friends.JPG",
-  "/gallery/ewww.jpg",
-  "/gallery/info-hoodie.jpg",
   "/gallery/fitting-room-selfie.jpg",
+  "/gallery/edge.jpg",
+  "/gallery/friends.jpg",
+  "/gallery/info_grad.jpg",
+  "/gallery/pizza.jpg",
   "/gallery/ski.JPG",
   "/gallery/snorlax.jpg"
 ]
