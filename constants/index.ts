@@ -1,13 +1,13 @@
 export const navigation = [
   {
-    name: 'Home',
+    name: 'Work',
     path: '/'
   }, {
     name: 'About',
     path: '/about'
   }, {
     name: 'Resume',
-    path: 'https://drive.google.com/file/d/12bB7SXbqClh8l_E5TMBrjctEca3M9FIr/view?usp=sharing'
+    path: 'https://drive.google.com/file/d/1-4mYXOg9GlESLHk7Wq-m0Q1HLO1H-CVn/view?usp=sharing'
   }, {
     name: 'Contact',
     path: '/contact'
@@ -22,6 +22,7 @@ export const projects = [
     title: 'Coffee Chat Coach',
     role: 'Full-stack Developer',
     desc: 'A full-stack AI web app enabling students and new grads to practice networking, interviews, and cold outreach through roleplay scenarios and feedback.',
+    why: 'Built to help students overcome networking fear through natural conversation practice.',
     alt: 'Coffee Chat Coach client side interface',
     tags: ['Next.js', 'TypeScript', 'React', 'RESTful APIs', 'Vercel', 'GROQ', 'Supabase', 'Cursor', 'Claude', 'Prompt Engineering', 'Full-stack Development'],
   },
@@ -32,6 +33,7 @@ export const projects = [
     title: 'Host Haven Stays',
     role: 'Full-stack Developer',
     desc: 'A short-term rental management platform for hosts to gain automated financial insights, manage their properties, bookings, and guests.',
+    why: 'Effortless property management so hosts can focus on hospitality, not spreadsheets.',
     alt: 'Host Haven Stays client side dashboard interface',
     tags: ['Next.js', 'TypeScript', 'React', 'DynamoDB', 'AWS', 'Golang', 'RESTful APIs', 'Cloudflare', 'Cognito', 'Vercel'],
   },
@@ -42,6 +44,7 @@ export const projects = [
     title: 'ByteBunny AI',
     role: 'Software Engineer',
     desc: 'Scrape any site and get AI-powered answers with real source citations, with your bunny buddy.',
+    why: 'Because research should be fast, accurate, and way more fun with a bunny sidekick.',
     alt: 'Byte Bunny AI Answer Engine Dashboard Interface',
     tags: ['Next.js', 'TypeScript', 'Vercel', 'OpenAI', 'Redis', 'GROQ', 'Puppeteer', 'Cheerio'],
   },
@@ -52,6 +55,7 @@ export const projects = [
     title: 'Customer Bank Churn Prediction',
     role: 'Software Engineer',
     desc: 'Predict which customers will leave your bank using machine learning and interactive inference.',
+    why: 'Helping banks retain customers by spotting churn signals before it\'s too late.',
     alt: 'Customer Bank Churn Prediction application dashboard',
     tags: ['Python', 'FastAPI', 'Streamlit', 'Replit', 'OpenAI', 'LLM'],
   },
@@ -62,6 +66,7 @@ export const projects = [
     title: 'MRI Brain Tumor Classification',
     role: 'Software/AI Engineer',
     desc: 'Diagnose brain tumors in MRI scans with deep learning and Gemini-powered AI explanations.',
+    why: 'Combining deep learning with explainable AI to support doctors in saving lives.',
     alt: 'brain tumor classification web app dashboard',
     tags: [
       'Python',
@@ -183,107 +188,104 @@ export const skills = [
   {
     name: 'JavaScript',
     svgPath: '/skills/js.png',
-    alt: '',
+    alt: 'JS',
   },
   {
     name: 'TypeScript',
     svgPath: '/skills/ts.png',
-    alt: '',
+    alt: 'TS',
   },
   {
-    name: 'React JS',
+    name: 'ReactJS',
     svgPath: '/skills/reactjs.png',
-    alt: '',
+    alt: 'React',
   },
   {
-    name: 'Next JS',
+    name: 'NextJS',
     svgPath: '/skills/nextjs.png',
-    alt: '',
+    alt: 'Next',
   },
   {
     name: 'AWS',
     svgPath: '/skills/aws.png',
-    alt: '',
+    alt: 'AWS',
   },
   {
     name: 'Node',
     svgPath: '/skills/nodejs.png',
-    alt: '',
+    alt: 'Node',
   },
   {
     name: 'Tailwind',
     svgPath: '/skills/tailwind.png',
-    alt: '',
+    alt: 'Tailwind',
   },
   {
     name: 'Bootstrap',
     svgPath: '/skills/bootstrap.png',
-    alt: '',
+    alt: 'Bootstrap',
   },
   {
     name: 'HTML5',
     svgPath: '/skills/html.png',
-    alt: '',
+    alt: 'HTML',
   },
   {
     name: 'CSS3',
     svgPath: '/skills/css.png',
-    alt: '',
+    alt: 'CSS',
   },
   {
     name: 'Java',
     svgPath: '/skills/java.png',
-    alt: '',
+    alt: 'Java',
   },
   {
     name: 'Python',
     svgPath: '/skills/python.png',
-    alt: '',
+    alt: 'Python',
   },
   {
-    name: 'Express JS',
+    name: 'ExpressJS',
     svgPath: '/skills/expressjs.png',
-    alt: '',
+    alt: 'Express',
   },
   {
     name: 'MongoDB',
     svgPath: '/skills/mongoDB.png',
-    alt: '',
+    alt: 'Mongo',
   },
   {
     name: 'SQL',
     svgPath: '/skills/sql.png',
-    alt: '',
+    alt: 'SQL',
   },
   {
     name: 'Git',
     svgPath: '/skills/git.png',
-    alt: '',
+    alt: 'Git',
   },
   {
     name: 'Figma',
     svgPath: '/skills/figma.png',
-    alt: '',
+    alt: 'Figma',
   },
   {
     name: 'npm',
     svgPath: '/skills/npm.png',
-    alt: '',
+    alt: 'NPM',
   },
 ]
 
 export const gallery = [
   "/gallery/band-roses.JPG",
+  "/gallery/blur_smile.jpg",
   "/gallery/fam-tree-atd.jpg",
-  "/gallery/frisbae.JPG",
-  "/gallery/action-shot.jpg",
-  "/gallery/cymbal-section.JPG",
-  "/gallery/snare-gp.jpg",
-  "/gallery/fam-tree-csa.JPG",
-  "/gallery/rooftop-w-friends.JPG",
-  "/gallery/ewww.jpg",
-  "/gallery/info-hoodie.jpg",
   "/gallery/fitting-room-selfie.jpg",
+  "/gallery/edge.jpg",
+  "/gallery/friends.jpg",
+  "/gallery/info_grad.jpg",
+  "/gallery/pizza.jpg",
   "/gallery/ski.JPG",
   "/gallery/snorlax.jpg"
 ]

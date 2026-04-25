@@ -22,7 +22,7 @@ export default function Footer() {
           })}
         </div>
       </div>
-      <p className="copyright text-center font-normal text-xs mb-2 text-secondary">&copy; 2025 Leo Li</p>
+      <p className="copyright text-center font-normal text-xs mb-2 text-secondary">&copy; 2026 Leo Li</p>
     </div>
   );
 }
